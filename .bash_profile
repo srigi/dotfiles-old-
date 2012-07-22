@@ -20,9 +20,8 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-alias lsa='ls -bFGhl'
-alias lsla='ls -AbFGhl'
-
+alias ls='ls -bFGhl'
+alias lsa='ls -AbFGhl'
 alias yuic='java -jar ~/bin/yuic'
 alias svnlog='svn log | less'
 

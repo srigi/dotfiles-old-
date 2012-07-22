@@ -24,7 +24,6 @@ source $ZSH/oh-my-zsh.sh
 # [== MAIN USER CONF ==]
 # ======================
 
-export BROWSER="firefox"
 export PATH=$PATH:$HOME/bin:/$HOME/.rvm/bin
 export NODE_PATH=$HOME/node_modules:/usr/local/lib/node_modules
 export EDITOR='/usr/bin/nano'
@@ -38,7 +37,7 @@ alias lsa='ls -AbFGhl'
 alias yuic='java -jar ~/bin/yuic'
 alias svnlog='svn log | less'
 
-alias -s html=$BROWSER
+alias -s html="open"
 alias -s {js,php,txt}=$EDITOR
 alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}="open"
 

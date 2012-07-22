@@ -1,5 +1,5 @@
-ZSH_THEME_GIT_PROMPT_PREFIX="$fg[green]($fg_bold[yellow]"
-ZSH_THEME_GIT_PROMPT_SUFFIX="$reset_color$fg[green])"
+ZSH_THEME_GIT_PROMPT_PREFIX="$fg[yellow]($fg[green]"
+ZSH_THEME_GIT_PROMPT_SUFFIX="$fg[yellow])"
 ZSH_THEME_GIT_PROMPT_DIRTY="$fg[white]*"
 
 
@@ -43,8 +43,8 @@ function put_spacing () {
 
 
 function precmd () {
-  print -rP "$fg[yellow]%n$fg[cyan]@%m: $fg[blue]$(prompt_cwd)$(put_spacing)$(prompt_git)"
+  print -rP "$fg_bold[cyan]%n$fg[green]@%m: $fg[blue]$(prompt_cwd)$(put_spacing)$(prompt_git)"
 }
 
 
-PROMPT='%{$fg_bold[green]%}→ %{$reset_color%}%{$fg[white]%}'
+PROMPT='%{$fg_bold[cyan]%}→ %{$reset_color%}%{$fg[white]%}'

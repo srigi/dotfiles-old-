@@ -15,7 +15,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Plugins can be found in ~/.oh-my-zsh/plugins/
 # Custom plugins go to    ~/.oh-my-zsh/custom/plugins/
-plugins=(git svn osxautocwd)
+plugins=(git svn rvm osxautocwd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,6 +41,8 @@ alias svnlog='svn log | less'
 alias -s html=$BROWSER
 alias -s {js,php,txt}=$EDITOR
 alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}="open"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 #setopt auto_cd                 # Change dir without cd
 #setopt extended_glob           # Regex globbing

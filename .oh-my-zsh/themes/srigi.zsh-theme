@@ -43,7 +43,7 @@ function put_spacing () {
 
 
 function precmd () {
-  print -rP "$fg[yellow]%n$fg[cyan]@%m: $fg[blue]$(prompt_cwd)$(put_spacing)$fg[white]$(prompt_git)"
+  print -rP "$fg[yellow]%n$fg[cyan]@%m: $fg[blue]$(prompt_cwd)$(put_spacing)$(prompt_git)"
 }
 
 

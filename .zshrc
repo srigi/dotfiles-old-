@@ -49,20 +49,21 @@ alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}="open"
 #setopt complete_in_word        # Not just at the end
 setopt always_to_end           # When complete from middle, move cursor
 #setopt no_match                # Show error if pattern has no matches
-#setopt no_beep                 # Disable beeps
+setopt no_beep                 # Disable beeps
 setopt list_packed             # Compact completion lists
 setopt list_types              # Show types in completion
 #setopt rec_exact               # Recognize exact, ambiguous matches
 #setopt hist_verify             # When using ! cmds, confirm first
-#setopt hist_ignore_all_dups    # Ignore dups in command history
-#setopt hist_ignore_space       # Don't add commands prepended by whitespace to history
-#setopt append_history          # Allow multiple sessions to append to the history file
-#setopt extended_history        # Save additional info to history file
-#setopt inc_append_history      # Append commands to history immediately
+setopt hist_ignore_all_dups    # Ignore dups in command history
+setopt hist_ignore_space       # Don't add commands prepended by whitespace to history
+setopt append_history          # Allow multiple sessions to append to the history file
+setopt extended_history        # Save additional info to history file
+setopt inc_append_history      # Append commands to history immediately
 #setopt prompt_subst            # Enable variable substitution in prompt
 #setopt correct                 # Command correction
 #setopt short_loops             # Allow short loops
-#setopt auto_pushd              # Automatically push directories onto dirstack
+setopt auto_pushd              # Automatically push directories onto dirstack
+setopt auto_remove_slash 		# Automatically remove slash from a completion if next typed character is a word delimiter
 
 #zstyle ':completion:*' completer _complete _ignored
 #zstyle ':completion:*' expand prefix suffix

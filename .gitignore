@@ -1,8 +1,14 @@
 */
-!.oh-my-zsh.srigi/
-!.oh-my-zsh.srigi/*
+!bin/
+!bin/*
+!.config/
+!.config/*
+!.dotfiles/
+!.dotfiles/*
+!.dotfiles/*/*
+!.dotfiles/*/*/*
 
 *dump
-*hst
 *history
-*update
+.zsh-update
+.z

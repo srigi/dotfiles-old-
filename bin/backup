@@ -1,0 +1,65 @@
+#!/bin/bash
+
+
+if [[ -z $1 || $1 = "--help" || $1 = "-h" ]]; then
+	echo "backup  version 1.1"
+	echo "Copyright (C) 2012 by Igor Hlina."
+	echo ""
+	echo "backup use rsync to backup MacOS X machine (profile, system/tools config) to external drive"
+	echo ""
+	echo "Usage: backup [OPTION]"
+	echo "       backup DEST"
+	echo ""
+	echo "Options:"
+	echo "-h --help  show this help"
+	exit
+fi
+
+if [ `whoami` != 'root' ]; then
+    echo " This script need to be run as root!"
+    exit
+fi
+
+# -a					archive mode, equals -rlptgoD (no -H, -A, -X)
+# -h					output numbers in a human-readable format
+# -r					recurse into directories
+# -l					copy symlinks as symlinks
+# -p					preserve permissions
+# -t					preserve modification times
+# -g					preserve group
+# -o					preserve owner (super-user only)
+# -D					same as --devices --specials
+# --devices				preserve device files (super-user only)
+# --specials			preserve special files
+# -H					preserve hard links
+# -A					preserve ACLs (implies -p)
+# -X					preserve extended attributes
+# -z					compress file data during the transfer
+# -n, --dry-run			perform a trial run with no changes made
+# --bwlimit=KBPS		limit I/O bandwidth, KBytes per second
+# --filter "P <exp>"	don't delete <exp> on receiver
+
+rsync \
+  -ah \
+  --progress \
+  --stats \
+  --delete \
+  --delete-excluded \
+  --delete-after \
+  --exclude-from="$HOME/bin/.backup/patterns-home.txt" \
+  /Users/srigi/ \
+  $1/Users.srigi
+
+# echo -e "\n================================="
+
+rsync \
+  -ah \
+  --progress \
+  --stats \
+  --delete \
+  --delete-excluded \
+  --delete-after \
+  --include-from="$HOME/bin/.backup/patterns-root.txt" \
+  --exclude-from="$HOME/bin/.backup/patterns-root.txt" \
+  / \
+  $1/root

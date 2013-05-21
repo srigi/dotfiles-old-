@@ -1,0 +1,35 @@
+#!/bin/sh
+
+
+function usage {
+	echo "Usage:"
+	echo "  $0 [path] [extension]"
+	exit
+}
+
+
+if [[ -z $1 || $1 = "--help" || $1 = "-h" ]]; then
+	usage
+fi
+
+if [ ! -d "$1" ]; then
+	echo "Sorry, [$1] is not a directory\n"
+	usage
+fi
+
+if [[ -z $2 ]]; then
+	usage
+fi
+
+
+for file in $1/*.$2; do
+
+	if [ $2 != "wav" ]; then
+		/usr/local/Cellar/mplayer/1.1/bin/mplayer "$file" -ao pcm:fast:file="${file%.$2}.wav" -vo null
+#		/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/mpextended.mpBinaries/Contents/MacOS/mplayer "$file" -ao pcm:fast:file="${file%.$2}.wav" -vo null
+	fi
+
+	lame -h -m j --vbr-new -V 2 -b 192 --noreplaygain "${file%.$2}.wav" "./${file##*/}.mp3"
+	rm "${file%.$2}.wav"
+
+done

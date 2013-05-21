@@ -1,0 +1,1 @@
+for file in *.flac; do flac -cd "$file" | lame -h -m j --vbr-new -V 2 -b 192 --lowpass 17000 --noreplaygain - "${file%.flac}.mp3"; done

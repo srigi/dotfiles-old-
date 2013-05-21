@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# lets. A productivity booster
+# based on ideas from https://gist.github.com/605292
+#
+# Copy your /etc/hosts to /etc/hosts.play and create a new one called /etc/hosts.work with a list of blocked sites
+# Usage: sudo lets [play|work]
+
+if [ $# = 0 ]
+  then
+  echo "Don't know what I must do!" >&2
+  exit 1
+fi
+
+if [ $UID -ne 0 ]
+  then
+  echo "Use me with sudo!" >&2
+  exit 2
+fi
+
+HOSTS=/etc/hosts
+ORIGIN="$HOSTS.$1"
+
+if [ -e $ORIGIN ]
+then # Let's do something!!
+    if [ `uname` = Darwin ]
+    then
+        FLUSH="$(which dscacheutil) -flushcache"
+    fi
+
+    rm $HOSTS && cp $ORIGIN $HOSTS && echo "Let's $1!"
+    $FLUSH
+else
+    echo "Ooops, don't know how to do $1!"
+    exit 3
+fi

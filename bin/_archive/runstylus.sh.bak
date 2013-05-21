@@ -1,0 +1,37 @@
+#!/bin/bash
+
+me=`basename $0` # script name
+
+args=()
+for arg in $*; do # push all command-line arguments to array
+  echo $arg
+	arr=("${arr[@]}" "$1")
+	args=("${args[@]}" $arg)
+done
+argslen=${#args[@]}
+command=""
+
+
+if [[ -z $2 || -z $1 || $1 = "--help" || $1 = "-h" ]]; then
+	echo "Usage:"
+	echo -e "  $me [inputdir] [outputdir] [options]\n"
+fi
+
+
+for arg in ${args[@]:2}; do
+	if [[ $arg == "-w" ]]; then
+		command="$command -w"
+	fi
+	if [[ $arg == "-u" ]]; then
+		# echo $argslen
+		# echo ${args[@]}
+		# if [[ ${args[@]:argslen-1} == "-u" ]]; then
+			# command="$command --use stylus-urlprefix"
+		# else
+			# command="$command --use stylus-urlprefix  \"${args[@]:argslen-1}\""
+		# fi
+	fi
+done
+
+#echo -e "\n$command"
+# echo -e "stylus $args -o $2 $1"

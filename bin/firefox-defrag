@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cwd=`pwd`
+cd ~/Library/Application\ Support/Firefox/Profiles/4l4xfxkd.default/
+ls -bFGhl | grep sqlite
+echo "\n--------------------\n"
+for z in `ls *.sqlite`; do echo "VACUUM;" | sqlite3 $z; done
+ls -bFGhl | grep sqlite
+cd $pwd

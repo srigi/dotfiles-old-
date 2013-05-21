@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+rsync -ah --progress --stats \
+	--exclude ".DS_Store" \
+	--exclude ".DocumentRevisions-V100" \
+	--exclude ".Spotlight-V100" \
+	--exclude ".TemporaryItems" \
+	--exclude ".Trash" \
+	--exclude ".Trashes" \
+	--exclude ".com.apple.timemachine.donotpresent" \
+	--exclude ".fseventsd" \
+	--exclude ".localized" \
+	$1 /Users/srigi/

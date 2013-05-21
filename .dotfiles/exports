@@ -1,0 +1,27 @@
+WHITE=$(tput setaf 0)
+MAGENTA=$(tput setaf 9)
+PURPLE=$(tput setaf 141)
+ORANGE=$(tput setaf 172)
+GREEN=$(tput setaf 190)
+
+#export PATH=$HOME/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+export PATH=$HOME/bin:$PATH:$HOME/.rvm/bin
+export NODE_PATH=/usr/local/lib/node_modules
+export EDITOR=/usr/local/bin/nano
+
+export CC=/usr/local/bin/gcc-4.2
+export CXX=/usr/local/bin/g++-4.2
+#export LDFLAGS=-L/usr/local/opt/ncurses/lib
+#export CPPFLAGS=-I/usr/local/opt/ncurses/include
+
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+export HISTIGNORE='ls:cd:cd -:pwd:exit:date:* --help'
+
+export LESS_TERMCAP_md=$ORANGE      # highlight section titles in man
+export MANPAGER='less -X'           # don’t clear the screen after quitting man

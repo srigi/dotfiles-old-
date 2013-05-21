@@ -1,0 +1,33 @@
+#zstyle ':completion:*' completer _complete _ignored
+#zstyle ':completion:*' expand prefix suffix
+#zstyle ':completion:*' group-name ''
+#zstyle ':completion:*' ignore-parents parent pwd .. directory
+#zstyle ':completion:*' insert-unambiguous true
+#zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+#zstyle ':completion:*' menu select
+#zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
+#zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+#zstyle ':completion:*' squeeze-slashes true
+#zstyle ':completion::complete:*' use-cache 1
+#zstyle ':completion::complete:*' cache-path ~/.zshcache
+
+# kill menu
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:*:killall:*:processes' command 'ps --forest -A -o pid,user,cmd'
+
+#zstyle ':completion:*:processes-names' command 'ps axho command'
+#zstyle ':completion:*:processes' command 'ps -au$USER -o pid,time,cmd|grep -v "ps -au$USER -o pid,time,cmd"'
+#zstyle ':completion:*:cd:*' ignored-patterns '(*/)#lost+found'
+#zstyle ':completion:*:matches' group yes
+#zstyle ':completion:*:options' description yes
+#zstyle ':completion:*:options' auto-description '%d'
+#zstyle ':completion:*:descriptions' format $'\e[01;33m-- %d --\e[0m'
+#zstyle ':completion:*:messages' format $'\e[01;35m-- %d --\e[0m'
+#zstyle ':completion:*:warnings' format $'\e[01;31m-- no matches found --\e[0m'
+#zstyle ':completion:*:manuals' separate-sections true
+#zstyle ':completion:*:manuals.*' insert-sections true
+#zstyle ':completion:*:man:*' menu yes select
+#zstyle ':completion:*:rm:*' ignore-line yes
+#zstyle ':completion:*:cp:*' ignore-line yes
+#zstyle ':completion:*:mv:*' ignore-line yes

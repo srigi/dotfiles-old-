@@ -1,0 +1,7 @@
+[[ -s "$HOME/.dotfiles/aliases" ]] && source "$HOME/.dotfiles/aliases"
+
+alias -s html="open"
+alias -s {js,php,txt}=$EDITOR
+alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}="open"
+
+alias -g G='| grep -A 2 -B 2'

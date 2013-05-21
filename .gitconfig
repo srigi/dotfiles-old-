@@ -2,43 +2,85 @@
 	name = Igor Hlina
 	email = srigi@srigi.sk
 
-[alias]
-	br = branch
-	ci = commit
-	co = checkout
-	graph1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-	graph2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit
-#	graph = !"git graph1"
-	lg = log --pretty=format:'%h | %ar | %an | %s'
-	lg1 = log --stat
-	st = status
-
-[color]
-	branch = auto
-	diff = auto
-	status = auto
-	ui = always
-
-[color "branch"]
-	current = yellow reverse
-	local = yellow 
-	remote = green
-
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = blue bold
-
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
-
 [core]
 	whitespace = nowarn
 
 [mergetool]
 	keepBackup = true
-[credential]
-	helper = osxkeychain
+
+#[credential]
+#	helper = osxkeychain
+
+[alias]
+	br = branch -v
+	s = status
+	st = status
+	stat = status
+	ss = status -sb  # short status with branch info
+	sst = status -sb
+	sstat = status -sb
+
+	# checkout
+	co = checkout
+
+	# commit
+	c = commit -m
+	ca = commit -am
+	ci = commit
+	amend = commint --amend
+
+	# diff
+	d = diff
+	dc = diff --cached
+	last = diff HEAD^
+
+	# log
+	changelog = log --pretty=format:' * %s'
+	l = log --pretty=format:'%h | %cr | %cn | %Cgreen%s%Creset'
+	lg = log --pretty=format:'%h %cr %cn %Cgreen%s%Creset' --name-status
+	lgg = log --stat
+	filelog = log -u  # show changes to a file
+
+	graph1 = log --graph --date=short
+	graph2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+	lgr = !"git graph2"
+
+	# rebase
+	rbi = rebase -i
+	rbc = rebase --continue
+	rbs = rebase --skip
+
+	# remote
+	rv = remote -v
+
+	# create a new named branch
+	# commit any changes on that branch
+	# swap you back to the branch you started on
+	#  usage: git save foobar
+	save = !sh -c 'export PREV=$(git symbolic-ref HEAD|cut -d/ -f3-) && git checkout -b "$1" && git commit -am "$1" && git checkout "$PREV"' -
+
+[color]
+	ui = true
+
+[color "status"]
+	branch = yellow reverse
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = cyan bold
+	new = blue bold
+	old = red bold
+	whitespace = white reverse
+
+[diff]
+  # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
+  # instead of a/b/c/d as prefixes for patches
+  mnemonicprefix = true

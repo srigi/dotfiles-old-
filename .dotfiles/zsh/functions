@@ -1,0 +1,27 @@
+function parse_git_dirty {
+  local SUBMODULE_SYNTAX=''
+
+  if [[ $POST_1_7_2_GIT -gt 0 ]]; then
+    SUBMODULE_SYNTAX="--ignore-submodules=dirty"
+  fi
+
+  if [[ -n $(git status -s ${SUBMODULE_SYNTAX} 2> /dev/null) ]]; then
+    echo "%F{red}✗"
+  else
+    echo "%F{blue}✓"
+  fi
+}
+
+
+function prompt_git {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "%F{green}[ %F{yellow}${ref#refs/heads/} $(parse_git_dirty) %F{green}] "
+}
+
+
+function prompt_rvm {
+  rbv=`rvm-prompt`
+  rbv=${rbv#ruby-}
+  [[ $rbv == *"@"* ]] || rbv="${rbv}@default"
+  echo "%F{green}[ %F{yellow}$rbv %F{green}]"
+}

@@ -26,3 +26,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Load zstyle definitions
 [[ -s "$HOME/.dotfiles/zsh/zstyle" ]] && source "$HOME/.dotfiles/zsh/zstyle"
+
+# load custom functions definitions
+[[ -s "$HOME/.dotfiles/zsh/functions" ]] && source "$HOME/.dotfiles/zsh/functions"

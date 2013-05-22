@@ -29,3 +29,6 @@ source $ZSH/oh-my-zsh.sh
 
 # load custom functions definitions
 [[ -s "$HOME/.dotfiles/zsh/functions" ]] && source "$HOME/.dotfiles/zsh/functions"
+
+# Load aliases
+[[ -s "$HOME/.dotfiles/zsh/aliases" ]] && source "$HOME/.dotfiles/zsh/aliases"

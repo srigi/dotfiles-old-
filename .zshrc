@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration
-ZSH=$HOME/.dotfiles/zsh/oh-my-zsh
+ZSH="$HOME/.dotfiles/zsh/oh-my-zsh"
 
 # Set name of the theme to load
 ZSH_THEME="../../themes/srigi"

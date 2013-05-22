@@ -1,9 +1,3 @@
-# replace <HOMEDIR_PATH> part with ~
-function prompt_cwd {
-  print -D $PWD
-}
-
-
 function parse_git_dirty {
   local SUBMODULE_SYNTAX=''
 
@@ -34,5 +28,5 @@ function prompt_rvm {
 
 
 
-PROMPT='%F{yellow}%n%F{green}@%m %F{blue}$(prompt_cwd) $(prompt_git)$(prompt_rvm)
+PROMPT='%F{yellow}%n%F{green}@%m %F{blue}%~ $(prompt_git)$(prompt_rvm)
 %B%F{cyan}→%f%b %F{white}'

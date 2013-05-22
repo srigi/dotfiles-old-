@@ -17,3 +17,11 @@ function prompt_git {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo -e "${green}[ ${yellow}${ref#refs/heads/} $(parse_git_dirty) ${green}] "
 }
+
+
+function prompt_rvm {
+  rbv=`rvm-prompt`
+  rbv=${rbv#ruby-}
+  [[ $rbv == *"@"* ]] || rbv="${rbv}@default"
+  echo -e "${green}[ ${yellow}$rbv ${green}]"
+}

@@ -7,7 +7,7 @@
 # load custom functions definitions
 [[ -s "$HOME/.dotfiles/bash/functions" ]] && source "$HOME/.dotfiles/bash/functions"
 
-export PS1="${yellow}\u${green}@\h ${biblue}\w \$(prompt_git)\n${white}\$ "
+export PS1="${yellow}\u${green}@\h ${biblue}\w \$(prompt_git)\$(prompt_rvm)\n${white}\$ "
 
 # load aliases definitions
 [[ -s "$HOME/.dotfiles/bash/aliases" ]] && source "$HOME/.dotfiles/bash/aliases"

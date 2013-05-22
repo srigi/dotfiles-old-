@@ -2,7 +2,7 @@
 ZSH=$HOME/.dotfiles/zsh/oh-my-zsh
 
 # Set name of the theme to load
-ZSH_THEME="srigi"
+ZSH_THEME="../../themes/srigi"
 
 # Disable weekly auto-update checks
 #DISABLE_AUTO_UPDATE="true"

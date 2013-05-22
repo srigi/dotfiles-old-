@@ -1,18 +1,19 @@
-function git_prompt {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "${ref#refs/heads/} $(parse_git_dirty)"
-}
-
 function parse_git_dirty {
   local SUBMODULE_SYNTAX=''
 
   if [[ $POST_1_7_2_GIT -gt 0 ]]; then
-        SUBMODULE_SYNTAX="--ignore-submodules=dirty"
+    SUBMODULE_SYNTAX="--ignore-submodules=dirty"
   fi
 
   if [[ -n $(git status -s ${SUBMODULE_SYNTAX}  2> /dev/null) ]]; then
-    echo -e "\033[31m✗"
+    echo -e "${red}✗"
   else
-    echo -e "\033[34m✓"
+    echo -e "${blue}✓"
   fi
+}
+
+
+function prompt_git {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo -e "${green}[ ${yellow}${ref#refs/heads/} $(parse_git_dirty) ${green}] "
 }

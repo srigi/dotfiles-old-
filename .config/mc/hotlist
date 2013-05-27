@@ -1,3 +1,5 @@
+ENTRY "$HOME" URL "/Users/srigi"
+ENTRY ".rvm" URL "/Users/srigi/.rvm"
 ENTRY "bin" URL "/Users/srigi/bin"
 ENTRY "Downloads" URL "/Users/srigi/Downloads"
 ENTRY "Desktop" URL "/Users/srigi/Desktop"

@@ -13,12 +13,9 @@
 
 [alias]
 	br = branch -v
-	s = status
+	s = status -sb
 	st = status
 	stat = status
-	ss = status -sb  # short status with branch info
-	sst = status -sb
-	sstat = status -sb
 
 	# checkout
 	co = checkout
@@ -27,7 +24,7 @@
 	c = commit -m
 	ca = commit -am
 	ci = commit
-	amend = commint --amend
+	amend = commit --amend
 
 	# diff
 	d = diff
@@ -35,15 +32,10 @@
 	last = diff HEAD^
 
 	# log
+	l = log --graph --pretty=format:'%Cred%h%Creset | %Cgreen%cr%Creset |%C(yellow)%d%Creset %s %C(magenta)<%an>%Creset' --abbrev-commit
+	ll = !"git l --name-status"
+	lll = !"git l --stat"
 	changelog = log --pretty=format:' * %s'
-	l = log --pretty=format:'%h | %cr | %cn | %Cgreen%s%Creset'
-	lg = log --pretty=format:'%h %cr %cn %Cgreen%s%Creset' --name-status
-	lgg = log --stat
-	filelog = log -u  # show changes to a file
-
-	graph1 = log --graph --date=short
-	graph2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-	lgr = !"git graph2"
 
 	# rebase
 	rbi = rebase -i
@@ -51,7 +43,7 @@
 	rbs = rebase --skip
 
 	# remote
-	rv = remote -v
+	r = remote -v
 
 	# create a new named branch
 	# commit any changes on that branch

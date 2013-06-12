@@ -2,7 +2,9 @@
 - .Trash
 - .localized
 - .adobe
+- .bower
 - .cache
+- .composer
 - .cups
 - .dropbox
 - .fontconfig
@@ -11,8 +13,10 @@
 - .nano
 - .node-gyp
 - .npm
+- .rnd
 - .rvm
 - .spumux
+- .sass-cache
 - .tdb
 - .zcompdump
 - Applications
@@ -23,6 +27,8 @@
 - Library/Application Support/AddressBook
 - Library/Application Support/Adobe
 - Library/Application Support/Apple
+- Library/Application Support/BitTorrent Sync/*.log
+- Library/Application Support/BitTorrent Sync/*.old
 - Library/Application Support/com.apple.QuickLook
 - Library/Application Support/com.apple.TCC
 - Library/Application Support/CrashReporter
@@ -42,10 +48,19 @@
 - Library/Application Support/Ofi Labs
 - Library/Application Support/OpenMeta
 - Library/Application Support/Oracle
+- Library/Application Support/Preview
+- Library/Application Support/RubyMine*
 - Library/Application Support/Screen Sharing
 - Library/Application Support/SyncServices
+- Library/Application Support/Sublime Text 2/Backup
 - Library/Application Support/Telestream
 - Library/Application Support/Ubiquity
+- Library/Application Support/uTorrent/apps
+- Library/Application Support/uTorrent/*.log
+- Library/Application Support/uTorrent/*.old
+- Library/Application Support/uTorrent/dht*.dat
+- Library/Application Support/uTorrent/ipfilter.dat
+- Library/Application Support/uTorrent/rss.dat
 - Library/Application Support/.TotalTerminalCrashWatcher.lock
 - Library/Assistants
 - Library/Audio
@@ -88,6 +103,7 @@
 - Library/Preferences/ExtendScript Toolkit
 - Library/Preferences/Macromedia
 - Library/Preferences/Parallels
+- Library/Preferences/RubyMine*
 - Library/Preferences/quikio
 - Library/Preferences/.GlobalPreferences.plist
 - Library/Preferences/*crash*
@@ -99,10 +115,12 @@
 - Library/Preferences/*.tunnelblick*
 - Library/Preferences/com.adobe*
 - Library/Preferences/com.apple*
+- Library/Preferences/com.binaryage*
 - Library/Preferences/com.derlien.DiskInventoryX*
 - Library/Preferences/com.eyePatch*
 - Library/Preferences/com.google*
 - Library/Preferences/com.install4j*
+- Library/Preferences/com.jetbrains*
 - Library/Preferences/com.mouapp*
 - Library/Preferences/com.parallels*
 - Library/Preferences/com.piriform*
@@ -114,6 +132,7 @@
 - Library/Preferences/net.pornel.ImageOptim*
 - Library/Preferences/net.sourceforge*
 - Library/Preferences/org.cups*
+- Library/Preferences/org.mozilla*
 - Library/Preferences/QuickTime*
 - Library/Preferences/UserEventAgent.plist
 - Library/Preferences/widget-com.apple*
@@ -126,12 +145,16 @@
 - Library/Saved Application State/com.google*
 - Library/Saved Application State/com.install4j.jdownloader*
 - Library/Saved Application State/com.parallels*
+- Library/Saved Application State/com.sublimetext*
 - Library/Saved Application State/de.filezilla*
+- Library/Saved Application State/org.mozilla*
 - Library/Screen Savers
 - Library/Sounds
+- Library/Spelling/LocalDictionary
 - Library/SyncedPreferences
 - Library/Voices
 - Library/WebKit
+- Library/Thunderbird/Crash Reports
 - Public
-- Spelling/LocalDictionary
-- Thunderbird/Crash Reports
+- Sites/projects/boom
+- Sites/projects/**/node_modules

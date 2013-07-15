@@ -26,3 +26,5 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 # for example, to list all directories that contain a certain file:
 #   find . -name .gitattributes | map dirname
 alias map="xargs -n1"
+
+alias npmls="npm list --depth=0 2>/dev/null"

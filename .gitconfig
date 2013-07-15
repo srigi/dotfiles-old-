@@ -4,6 +4,7 @@
 
 [core]
 	whitespace = nowarn
+	editor = /usr/local/bin/nano
 
 [mergetool]
 	keepBackup = true

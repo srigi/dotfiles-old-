@@ -77,3 +77,7 @@
   # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
+
+[push]
+	# don't push all local branches, only ones that are already on remote
+	default = tracking

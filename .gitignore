@@ -2,7 +2,7 @@
 !bin/
 !bin/*
 !.config/
-!.config/*
+!.config/mc
 !.dotfiles/
 !.dotfiles/*
 !.dotfiles/*/*
@@ -10,5 +10,8 @@
 
 *dump
 *history
+*hst
+.netrc
+.rnd
 .zsh-update
 .z

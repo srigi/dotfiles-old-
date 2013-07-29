@@ -4,8 +4,7 @@ PURPLE=$(tput setaf 141)
 ORANGE=$(tput setaf 172)
 GREEN=$(tput setaf 190)
 
-#export PATH=$HOME/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH
-export PATH=$HOME/bin:$PATH:$HOME/.rvm/bin
+export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH:$HOME/bin
 export NODE_PATH=/usr/local/lib/node_modules
 export EDITOR=nano
 

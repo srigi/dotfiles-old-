@@ -1,3 +1,6 @@
+# Don't paint user@hostname on prompt for user...
+DEFAULT_USER='srigi'
+
 # Path to your oh-my-zsh configuration
 ZSH="$HOME/.dotfiles/zsh/oh-my-zsh"
 
@@ -26,9 +29,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Load zstyle definitions
 [[ -s "$HOME/.dotfiles/zsh/zstyle" ]] && source "$HOME/.dotfiles/zsh/zstyle"
-
-# load custom functions definitions
-[[ -s "$HOME/.dotfiles/zsh/functions" ]] && source "$HOME/.dotfiles/zsh/functions"
 
 # Load aliases
 [[ -s "$HOME/.dotfiles/zsh/aliases" ]] && source "$HOME/.dotfiles/zsh/aliases"

@@ -6,7 +6,7 @@ GREEN=$(tput setaf 190)
 
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH:$HOME/bin
 export NODE_PATH=/usr/local/lib/node_modules
-export EDITOR=nano
+export EDITOR=vim
 
 export CC=/usr/local/bin/gcc-4.2
 export CXX=/usr/local/bin/g++-4.2

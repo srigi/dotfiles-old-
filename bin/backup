@@ -20,17 +20,21 @@ if [ `whoami` != 'root' ]; then
     exit
 fi
 
+osascript -e 'if application "iTerm" is frontmost then tell application "System Events" to keystroke "k" using command down'
+echo -e "=== \033[0;33mbackuping \033[1;34m/Users/srigi\033[0m ==============================="
+
 # -a					archive mode, equals -rlptgoD (no -H, -A, -X)
 # -h					output numbers in a human-readable format
 # -r					recurse into directories
 # -l					copy symlinks as symlinks
+# -L          transform symlink into referent file/dir
 # -p					preserve permissions
 # -t					preserve modification times
 # -g					preserve group
 # -o					preserve owner (super-user only)
 # -D					same as --devices --specials
-# --devices				preserve device files (super-user only)
-# --specials			preserve special files
+# --devices		preserve device files (super-user only)
+# --specials	preserve special files
 # -H					preserve hard links
 # -A					preserve ACLs (implies -p)
 # -X					preserve extended attributes
@@ -40,7 +44,7 @@ fi
 # --filter "P <exp>"	don't delete <exp> on receiver
 
 rsync \
-  -ah \
+  -rlptDh \
   --progress \
   --stats \
   --delete \
@@ -50,10 +54,10 @@ rsync \
   /Users/srigi/ \
   $1/Users.srigi
 
-# echo -e "\n================================="
+echo -e "\n=== \033[0;33mbackuping \033[1;34m/\033[0m =========================================="
 
 rsync \
-  -ah \
+  -rpthDL \
   --progress \
   --stats \
   --delete \

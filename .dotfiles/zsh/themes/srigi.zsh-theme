@@ -55,16 +55,13 @@ function prompt_git {
 
 # Paint current RVM Ruby & gemset
 function prompt_rvm {
-  rbv=`rvm-prompt`
-  rbv=${rbv#ruby-}
-  # [[ $rbv == *"@"* ]] || rbv="${rbv}@default"
-  prompt_segment 24 146 $rbv
+  prompt_segment 24 146 `rvm-prompt v p g`
 }
 
 build_prompt() {
   prompt_context
   prompt_dir
-  # prompt_rvm
+  prompt_rvm
   prompt_git
   prompt_end
 }

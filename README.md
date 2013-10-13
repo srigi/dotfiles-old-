@@ -1,16 +1,26 @@
 # srigi's dotfiles
 
-These are config files to set up a system the way I like it. Here is for example my ZSH prompt:
+is a collection of configuration files & command-line tools to setup *NIX system the way I like it. Example my ZSH prompt:
 
-![a](http://img.srigi.sk/prompt.png)
+![a](http://img.srigi.sk/prompt.new.png)
 
-`<user>@<hostname> <cwd> [<git branch><workdir dirty status>] [current RVM ruby@gemset]`
+Segments on command-line prompt (those in square brackets are displayed only when needed):
 
-You can also see directory jumper Z in action in that screen. And this is how my `git log` looks like:
+`[user@hostname] <cwd> <rvm's ruby[@gemset]> <[➦]git branch|HEAD>`
+
+In the screenshot above you can see [directory jumper Z](https://github.com/rupa/z/wiki) in action. It is a small plugin for your command-line interpreter, that stores path, frequency & timestamp in text database as you are navigating across filesystem usin command-line.
+
+When database contains enough informations, you can use `z` to jump directly into directory that matches your query.
+
+Here is another screenshot, `git log`:
 
 ![a](http://img.srigi.sk/gitl.png)
 
-Configuration files in root of the repo (.dotfiles) contains lots of sensible defaults:
+For best results, please use terminal emulator with 256 colors support!
+
+## .dotfiles
+
+Configuration files contains lots of sensible defaults:
 
 - configuration for Midnight Commander
   - panels view
@@ -40,16 +50,28 @@ Configuration for command-line interpreters is nicely splitted into several file
 
 Tons of optios is still commented out in `.dotfiles/zsh/{setopt,zstyle}`, so experiment with *unlimited* possibilities of ZSH.
 
-## directory jumper Z
+### bin
 
-TODO
+In `bin` directory you can find lots of useful command-line tools:
 
-## useful scripts
-
-TODO
+- `closure compiler` & `yuicompressor`
+- `backup` - script to backup Mac OS X user profile
+- `composer`
+- `firefox-defrag` - vaccum your Firefox's sqlite databases
+- `flac2mp3` - convert `.flac` files into `.mp3`
+- `flv2mp3` - convert `.flv` & `.mp4` videofiles into `.mp3`
+- `ftpmounts`
+- lets*
+- `postinstall` - postinstall script for Mac OS X (based on [Mathias Bynens legendary script](https://github.com/mathiasbynens/dotfiles/blob/master/.osx))
+- `restore` - script to restore Mac OS X user profile from backup
+- `subl` - script to open files in Sublime text from command-line
+- `totalTerminal.postinstall`
+- `yt` - Youtube downloader
+- `z.sh` - Directory jumper z
 
 ## installation
 
+- use 256 color terminal emulator (iTerm on Mac)
 - clone repository into your home dir.
 - `git submodule init`, then `git submodule update`
 - set your command line interpreter to ZSH: `chsh -s /bin/zsh <username>`
@@ -57,7 +79,7 @@ TODO
   - run `bin/postinstall`, then restart
   - `cd .dotfiles/zsh/oh-my-zsh/custom`, then `ln -s ~/.dotfiles/zsh/plugins plugins`
   - install missing GNU tools `brew install coreutils`
-- rerun your terminal app
+- restart your terminal app
 
 If you want to benefit from configuration for `nano` in Mac OS, please install version from homebrew:
 

@@ -31,6 +31,9 @@ defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 # possible values: `WhenScrolling`, `Automatic` and `Always`
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
+# Disable smooth scrolling
+#defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
+
 # Disable opening and closing window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
@@ -60,6 +63,15 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Disable Notification Center and remove the menu bar icon
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+
+# Disable smart quotes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Disable smart dashes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 
 ###############################################################################
@@ -156,8 +168,11 @@ chflags nohidden ~/Library
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
-# Set the icon size of Dock items to 36 pixels
+# Set the icon size in pixels of Dock items
 defaults write com.apple.dock tilesize -int 42
+
+# Minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
 
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
@@ -221,6 +236,26 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
+# Add a context menu item for showing the Web Inspector in web views
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+
+###############################################################################
+# Spotlight                                                                   #
+###############################################################################
+
+# Disable Spotlight indexing for any volume that gets mounted
+#sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+
+# Load new settings before rebuilding the index
+#killall mds > /dev/null 2>&1
+
+# Make sure indexing is enabled for the main volume
+#sudo mdutil -i on / > /dev/null
+
+# Rebuild the index from scratch
+#sudo mdutil -E / > /dev/null
+
 
 ###############################################################################
 # Terminal                                                                    #
@@ -253,7 +288,7 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Dashboard" "Dock" "Finder" "Safari" "SystemUIServer" "Terminal"; do
+for app in "Dock" "Finder" "Safari" "SystemUIServer" "Terminal"; do
 	killall "$app" > /dev/null 2>&1
 done
 

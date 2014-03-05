@@ -4,35 +4,46 @@
 - .adobe
 - .bower
 - .cache
+- .config/configstore
 - .composer
+- .cordova
 - .cups
+- .distlib
 - .dropbox
+- .dropbox-master
 - .fontconfig
 - .gem
+- .ionic
+- .lein
+- .lesshst
 - .local
 - .m2
 - .mplayer
 - .nano
 - .node-gyp
 - .npm
+- .plugman
 - .putty
 - .rnd
 - .rvm
 - .spumux
 - .sass-cache
 - .tdb
-- .zcompdump
+- .zcompdump*
 - Applications
 - Applications (Parallels)
+- Documents/.parallels-vm-directory
 - Dropbox/.dropbox.cache
 - Library/Accounts
 - Library/Address Book Plug-Ins
 - Library/Application Support/AddressBook
 - Library/Application Support/Adobe
 - Library/Application Support/Apple
+- Library/Application Support/App Store
 - Library/Application Support/BitTorrent Sync/*.log
 - Library/Application Support/BitTorrent Sync/*.old
 - Library/Application Support/com.apple.QuickLook
+- Library/Application Support/com.apple.sbd
 - Library/Application Support/com.apple.TCC
 - Library/Application Support/CrashReporter
 - Library/Application Support/Dock
@@ -42,6 +53,7 @@
 - Library/Application Support/iCloud
 - Library/Application Support/iLifeMediaBrowser
 - Library/Application Support/Librarian
+- Library/Application Support/LibreOffice
 - Library/Application Support/Mail
 - Library/Application Support/MobileSync
 - Library/Application Support/Mozilla
@@ -63,6 +75,7 @@
 - Library/Application Support/uTorrent/dht*.dat
 - Library/Application Support/uTorrent/ipfilter.dat
 - Library/Application Support/uTorrent/rss.dat
+- Library/Application Support/VisualVM
 - Library/Application Support/.TotalTerminalCrashWatcher.lock
 - Library/Application Support/.TotalSpacesCrashWatcher.lock
 - Library/Assistants
@@ -76,12 +89,16 @@
 - Library/Compositions
 - Library/Containers
 - Library/Cookies
+- Library/Developer
+- Library/Dictionaries
 - Library/Favorites
 - Library/FontCollections
 - Library/Frameworks
 - Library/GameKit
 - Library/Google
+- Library/Group Containers
 - Library/iMovie
+- Library/IdentityServices
 - Library/Input Methods
 - Library/Internet Plug-Ins
 - Library/iTunes
@@ -93,10 +110,12 @@
 - Library/Messages
 - Library/Metadata
 - Library/Mobile Documents
+- Library/MobileSafari
 - Library/Mozilla
 - Library/openvpn
 - Library/Parallels
 - Library/PhotoshopCrashes
+- Library/PreferencePanes
 - Library/Preferences/Adobe
 - Library/Preferences/Adobe*
 - Library/Preferences/ByHost/com.adobe*
@@ -105,6 +124,7 @@
 - Library/Preferences/ExtendScript Toolkit
 - Library/Preferences/Macromedia
 - Library/Preferences/Parallels
+- Library/Preferences/PDAppFlex
 - Library/Preferences/quikio
 - Library/Preferences/.GlobalPreferences.plist
 - Library/Preferences/*crash*
@@ -118,9 +138,13 @@
 - Library/Preferences/com.derlien.DiskInventoryX*
 - Library/Preferences/com.eyePatch*
 - Library/Preferences/com.install4j*
+- Library/Preferences/com.oracle.java*
 - Library/Preferences/com.parallels*
-- Library/Preferences/com.piriform*
+- Library/Preferences/com.solidstatenetworks*
+- Library/Preferences/com.trolltech*
+- Library/Preferences/fr.madrau.switchres*
 - Library/Preferences/io.quik*
+- Library/Preferences/jetbrains.communicator*
 - Library/Preferences/loginwindow.plist
 - Library/Preferences/mbicloudsetup.plist
 - Library/Preferences/MobileMeAccounts.plist
@@ -128,7 +152,9 @@
 - Library/Preferences/net.pornel.ImageOptim*
 - Library/Preferences/net.sourceforge*
 - Library/Preferences/org.cups*
+- Library/Preferences/org.libreoffice*
 - Library/Preferences/org.mozilla*
+- Library/Preferences/xcode*
 - Library/Preferences/QuickTime*
 - Library/Preferences/UserEventAgent.plist
 - Library/Preferences/widget-com.apple*
@@ -141,8 +167,12 @@
 - Library/Saved Application State/com.install4j.jdownloader*
 - Library/Saved Application State/com.parallels*
 - Library/Saved Application State/de.filezilla*
+- Library/Saved Application State/net.java.openjdk*
+- Library/Saved Application State/org.libreoffice*
+- Library/Services
 - Library/Screen Savers
 - Library/Sounds
+- Library/Spelling/dynamic-counts.dat
 - Library/Spelling/dynamic-text.dat
 - Library/Spelling/LocalDictionary
 - Library/SyncedPreferences

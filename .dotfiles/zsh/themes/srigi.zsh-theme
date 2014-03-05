@@ -58,10 +58,10 @@ function prompt_rvm {
   prompt_segment 24 146 `rvm-prompt v p g`
 }
 
-build_prompt() {
+function build_prompt() {
   prompt_context
   prompt_dir
-  prompt_rvm
+  #prompt_rvm
   prompt_git
   prompt_end
 }

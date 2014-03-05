@@ -67,10 +67,10 @@
 	remote = green
 
 [color "diff"]
-	meta = yellow bold
-	frag = cyan bold
-	new = blue bold
-	old = red bold
+	meta = yellow
+	frag = cyan
+	new = blue
+	old = red
 	whitespace = white reverse
 
 [diff]

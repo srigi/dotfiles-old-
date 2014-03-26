@@ -51,6 +51,7 @@
 - Library/Application Support/Firefox/Crash Reports
 - Library/Application Support/Google Earth
 - Library/Application Support/iCloud
+- Library/Application Support/iLifeAssetManagement
 - Library/Application Support/iLifeMediaBrowser
 - Library/Application Support/Librarian
 - Library/Application Support/LibreOffice
@@ -125,6 +126,7 @@
 - Library/Preferences/Macromedia
 - Library/Preferences/Parallels
 - Library/Preferences/PDAppFlex
+- Library/Preferences/StageManager*
 - Library/Preferences/quikio
 - Library/Preferences/.GlobalPreferences.plist
 - Library/Preferences/*crash*
@@ -180,4 +182,3 @@
 - Library/WebKit
 - Library/Thunderbird/Crash Reports
 - Public
-- Sites/projects/**/node_modules

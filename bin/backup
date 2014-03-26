@@ -5,7 +5,7 @@ if [[ -z $1 || $1 = "--help" || $1 = "-h" ]]; then
 	echo "backup  version 1.1"
 	echo "Copyright (C) 2012 by Igor Hlina."
 	echo ""
-	echo "backup use rsync to backup MacOS X machine (profile, system/tools config) to external drive"
+	echo "Using rsync backup MacOS X machine (profile, system/tools config) to external drive"
 	echo ""
 	echo "Usage: backup [OPTION]"
 	echo "       backup DEST"

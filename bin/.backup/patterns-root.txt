@@ -8,7 +8,6 @@
 + private/etc/apache2/users/
 + private/etc/apache2/users/*
 + private/etc/apache2/httpd.conf
-+ private/etc/fstab
 + private/etc/hosts
 + private/etc/paths
 + usr/
@@ -21,6 +20,7 @@
 + usr/local/lib/
 + usr/local/lib/node_modules/
 + usr/local/lib/node_modules/*
+- usr/local/lib/node_modules/.bin
 + usr/local/mysql/
 + usr/local/mysql/data/
 + usr/local/mysql/data/**

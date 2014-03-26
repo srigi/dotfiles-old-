@@ -5,6 +5,7 @@
 [core]
 	whitespace = nowarn
 	editor = vim
+	pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 
 [mergetool]
 	keepBackup = true

@@ -33,9 +33,11 @@
 - Applications
 - Applications (Parallels)
 - Documents/.parallels-vm-directory
+- Downloads.trrnt
 - Dropbox/.dropbox.cache
 - Library/Accounts
 - Library/Address Book Plug-Ins
+- Library/Application Scripts
 - Library/Application Support/AddressBook
 - Library/Application Support/Adobe
 - Library/Application Support/Apple
@@ -48,14 +50,17 @@
 - Library/Application Support/CrashReporter
 - Library/Application Support/Dock
 - Library/Application Support/eSellerate
+- Library/Application Support/Feral Interactive
 - Library/Application Support/Firefox/Crash Reports
 - Library/Application Support/Google Earth
 - Library/Application Support/iCloud
 - Library/Application Support/iLifeAssetManagement
 - Library/Application Support/iLifeMediaBrowser
+- Library/Application Support/Kopsik
 - Library/Application Support/Librarian
 - Library/Application Support/LibreOffice
 - Library/Application Support/Mail
+- Library/Application Support/MindVision
 - Library/Application Support/MobileSync
 - Library/Application Support/Mozilla
 - Library/Application Support/NotificationCenter
@@ -137,6 +142,7 @@
 - Library/Preferences/*.tunnelblick*
 - Library/Preferences/com.adobe*
 - Library/Preferences/com.apple*
+- Library/Preferences/com.cineform*
 - Library/Preferences/com.derlien.DiskInventoryX*
 - Library/Preferences/com.eyePatch*
 - Library/Preferences/com.install4j*
@@ -181,4 +187,5 @@
 - Library/Voices
 - Library/WebKit
 - Library/Thunderbird/Crash Reports
+- Movies/serialzz
 - Public

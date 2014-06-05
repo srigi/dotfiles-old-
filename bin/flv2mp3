@@ -23,12 +23,10 @@ fi
 
 
 for file in $1/*.$2; do
-
 	if [ $2 != "wav" ]; then
-		/usr/local/Cellar/mplayer/1.1/bin/mplayer "$file" -ao pcm:fast:file="${file%.$2}.wav" -vo null
+		mplayer "$file" -ao pcm:fast:file="${file%.$2}.wav" -vo null
 	fi
 
 	lame -h -m j --vbr-new -V 2 -b 192 --noreplaygain "${file%.$2}.wav" "./${file##*/}.mp3"
 	rm "${file%.$2}.wav"
-
 done

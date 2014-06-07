@@ -6,11 +6,10 @@ alias s="subl ."
 alias c='pygmentize -O style=monokai -f console256 -g'
 alias ls='gls -lAFh --color --group-directories-first'
 alias lsa='gls -lFh --color --group-directories-first'
+alias npmls="npm list --depth=0 2>/dev/null"
 alias sudo='sudo '												# enable aliases to be sudo’ed
 #alias sudo='A=`alias` sudo env '								# save current ENV when sudo
 alias irb='irb --readline -r irb/completion'
-alias googc='java -jar ~/bin/closure_compiler/compiler.jar'
-alias yuic='java -jar ~/bin/yuicompressor/yuicompressor-2.4.7.jar'
 
 # recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
@@ -26,5 +25,3 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 # for example, to list all directories that contain a certain file:
 #   find . -name .gitattributes | map dirname
 alias map="xargs -n1"
-
-alias npmls="npm list --depth=0 2>/dev/null"

@@ -1,8 +1,0 @@
-yt()
-{
-  if [ $# -gt 0 ]
-  	youtube-dl -t --max-quality 22 "$@"
-  else
-  	youtube-dl -t --max-quality 22 "$(xsel -b)"
-  fi
-}

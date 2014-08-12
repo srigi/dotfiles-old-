@@ -7,6 +7,7 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 alias ls='gls -lAFh --color --group-directories-first'
 alias lsa='gls -lFh --color --group-directories-first'
 alias npmls="npm list --depth=0 2>/dev/null"
+alias npmo="npm outdated --depth 0"
 alias sudo='sudo '												# enable aliases to be sudo’ed
 #alias sudo='A=`alias` sudo env '								# save current ENV when sudo
 alias irb='irb --readline -r irb/completion'

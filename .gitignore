@@ -14,5 +14,7 @@
 .netrc
 .rnd
 .viminfo
+.wakatime.db
+.wakatime.log
 .zsh-update
 .z

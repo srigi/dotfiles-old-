@@ -5,7 +5,7 @@
 - .bower
 - .cache
 - .config/configstore
-- .composer
+- .composer/cache
 - .cordova
 - .cups
 - .distlib

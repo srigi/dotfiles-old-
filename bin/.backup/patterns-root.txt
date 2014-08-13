@@ -17,10 +17,6 @@
 + usr/local/etc/
 + usr/local/etc/nginx/
 + usr/local/etc/nginx/*.conf
-+ usr/local/lib/
-+ usr/local/lib/node_modules/
-+ usr/local/lib/node_modules/*
-- usr/local/lib/node_modules/.bin
 + usr/local/mysql/
 + usr/local/mysql/data/
 + usr/local/mysql/data/**

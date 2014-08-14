@@ -1,0 +1,8 @@
+#!/bin/sh
+
+
+shopt -s extglob
+
+for file in *.+(flac|flv|mkv|mp4); do
+	ffmpeg -i "$file" -ac 2 -f wav - | lame -h -m j --vbr-new -V 2 -b 192 --lowpass 17000 --noreplaygain - "${file%.*}.mp3"
+done

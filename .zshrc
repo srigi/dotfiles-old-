@@ -16,7 +16,7 @@ export UPDATE_ZSH_DAYS=30
 # Disable autosetting terminal title
 DISABLE_AUTO_TITLE="true"
 
-plugins=(brew cp gitfast npm rvm)
+plugins=(brew cp gitfast npm)
 
 # Load OH MY ZSH
 source $ZSH/oh-my-zsh.sh

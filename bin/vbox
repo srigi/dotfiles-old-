@@ -1,0 +1,52 @@
+#!/bin/bash
+
+
+function usage {
+	echo "Usage:"
+	echo "  vbox <command> <name>"
+	echo ""
+	echo "Commands:"
+	echo "  start"
+	echo "  stop"
+	echo "  info"
+	echo "  props"
+	echo "  compress"
+}
+
+
+if [[ -z $1 || $1 = "--help" || $1 = "-h" ]]; then
+	usage
+	exit
+fi
+
+if [[ -z $2 ]]; then
+	echo "Please provide name of the VM:"
+	echo "  vbox $1 <name>"
+	exit
+fi
+
+
+if [[ $1 = "start" ]]; then
+	VBoxManage startvm $2 --type headless
+fi
+
+if [[ $1 = "stop" ]]; then
+	VBoxManage controlvm $2 acpipowerbutton
+fi
+
+if [[ $1 = "info" ]]; then
+	VBoxManage showvminfo $2
+fi
+
+if [[ $1 = "props" ]]; then
+	VBoxManage guestproperty enumerate $2
+fi
+
+if [[ $1 = "compress" ]]; then
+	cd $HOME/VirtualBox/$2 2>/dev/null
+    status=$?
+
+	if [ $status -eq 0 ]; then
+		for file in *.vdi; do VBoxManage modifyhd "$file" --compact; done
+	fi
+fi

@@ -58,7 +58,7 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 # Reveal IP address, hostname, OS version when clicking the clock in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-# Disable smart & dashes quotes as they’re annoying when typing code
+# Disable smart quotes & dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 

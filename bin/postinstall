@@ -5,16 +5,14 @@
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Ask for hostname
-read -p "Select hostname (or hit ENTER to continue w/o setting it): " hostname;
-
 
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 
+# Set computer hostname
+read -p "Select hostname (or hit ENTER to continue w/o setting it): " hostname;
 if [ $hostname ]; then
-	# Set computer hostname
 	sudo scutil --set ComputerName $hostname
 	sudo scutil --set HostName $hostname
 	sudo scutil --set LocalHostName $hostname

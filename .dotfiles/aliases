@@ -11,6 +11,8 @@ alias npmo="npm outdated --depth 0"
 alias sudo='sudo '												# enable aliases to be sudo’ed
 #alias sudo='A=`alias` sudo env '								# save current ENV when sudo
 alias irb='irb --readline -r irb/completion'
+alias lsports='lsof -Pni4 | grep LISTEN'
+alias lsportss='netstat -an | grep LISTEN'
 
 # recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
@@ -19,7 +21,7 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
 # view HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias sniff="sudo ngrep -d 'lo0' -t '^(DELETE|GET|OPTIONS|POST|PUT) ' 'tcp and port 8000'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # intuitive map function

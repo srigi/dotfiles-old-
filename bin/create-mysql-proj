@@ -1,0 +1,50 @@
+#!/bin/bash
+
+
+echo "Welcome to create-mysql-proj setup script. This script create database & db-user for the project.
+Read carefully every prompt. You can select default value (in brackets) by pressing RETURN."
+echo "
+We'll now ask for parameters for project database & db user. Password will be generated for you automatically."
+
+read -p "> enter db admin username (default \"root\"): " DBADMIN_USERNAME;
+if [ -z $DBADMIN_USERNAME ]; then
+	DBADMIN_USERNAME="root"
+fi
+
+read -s -p "> enter db admin password: " DBADMIN_PASSWORD;
+
+
+# #############################################################
+read -p "
+> name of the database for the project (default \"nette\"): " NEWDB_NAME;
+if [ -z $NEWDB_NAME ]; then
+	NEWDB_NAME="nette"
+fi
+
+read -p "> name of the db user for the project (default \"nette\"): " NEWDB_USERNAME;
+if [ -z $NEWDB_USERNAME ]; then
+	NEWDB_USERNAME="nette"
+fi
+
+NEWDB_PASSWORD=`env LC_ALL=C tr -dc "a-zA-Z0-9-_" < /dev/urandom | head -c 16`
+echo "  password of db user is: \"$NEWDB_PASSWORD\""
+
+
+# #############################################################
+echo -n "
+Creating database and db user for the project... "
+
+
+Q1="CREATE DATABASE IF NOT EXISTS $NEWDB_NAME COLLATE 'utf8_unicode_ci'"
+Q2="CREATE USER '$NEWDB_USERNAME'@'localhost' IDENTIFIED BY '$NEWDB_PASSWORD'"
+Q3="GRANT ALTER, ALTER ROUTINE, CREATE, CREATE VIEW, CREATE ROUTINE, DELETE, DROP, EVENT, EXECUTE, INDEX, INSERT, REFERENCES, SELECT, SHOW VIEW, TRIGGER, UPDATE ON $NEWDB_NAME.* TO '$NEWDB_USERNAME'@'localhost'"
+Q100="FLUSH PRIVILEGES"
+SQL="${Q1}; ${Q2}; ${Q3}; ${Q100}"
+
+mysql --user=$DBADMIN_USERNAME --password=$DBADMIN_PASSWORD -e "$SQL;"
+if [[ $? > 0 ]]; then
+    echo "FAIL"
+    exit
+fi
+
+echo "OK"

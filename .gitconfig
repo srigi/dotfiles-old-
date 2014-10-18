@@ -10,8 +10,8 @@
 [mergetool]
 	keepBackup = true
 
-#[credential]
-#	helper = osxkeychain
+[credential]
+	helper = osxkeychain
 
 [alias]
 	br = branch -v

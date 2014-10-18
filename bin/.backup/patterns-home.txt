@@ -25,6 +25,7 @@
 - .plugman
 - .putty
 - .rnd
+- .rbenv
 - .rvm
 - .spumux
 - .sass-cache
@@ -58,7 +59,6 @@
 - Library/Application Support/iLifeMediaBrowser
 - Library/Application Support/Kopsik
 - Library/Application Support/Librarian
-- Library/Application Support/LibreOffice
 - Library/Application Support/Mail
 - Library/Application Support/MindVision
 - Library/Application Support/MobileSync
@@ -82,6 +82,7 @@
 - Library/Application Support/uTorrent/ipfilter.dat
 - Library/Application Support/uTorrent/rss.dat
 - Library/Application Support/VisualVM
+- Library/Application Support/voice-change-o-matic-*
 - Library/Application Support/.TotalTerminalCrashWatcher.lock
 - Library/Application Support/.TotalSpacesCrashWatcher.lock
 - Library/Assistants
@@ -142,14 +143,18 @@
 - Library/Preferences/*.tunnelblick*
 - Library/Preferences/com.adobe*
 - Library/Preferences/com.apple*
+- Library/Preferences/com.binaryage.asepsis*
 - Library/Preferences/com.cineform*
 - Library/Preferences/com.derlien.DiskInventoryX*
 - Library/Preferences/com.eyePatch*
+- Library/Preferences/com.iconfactory.mac.xScope
 - Library/Preferences/com.install4j*
 - Library/Preferences/com.oracle.java*
 - Library/Preferences/com.parallels*
+- Library/Preferences/com.qtproject*
 - Library/Preferences/com.solidstatenetworks*
 - Library/Preferences/com.trolltech*
+- Library/Preferences/com.unity3d*
 - Library/Preferences/fr.madrau.switchres*
 - Library/Preferences/io.quik*
 - Library/Preferences/jetbrains.communicator*
@@ -160,11 +165,11 @@
 - Library/Preferences/net.pornel.ImageOptim*
 - Library/Preferences/net.sourceforge*
 - Library/Preferences/org.cups*
-- Library/Preferences/org.libreoffice*
-- Library/Preferences/org.mozilla*
 - Library/Preferences/xcode*
+- Library/Preferences/org.virtualbox*
 - Library/Preferences/QuickTime*
 - Library/Preferences/UserEventAgent.plist
+- Library/Preferences/voice-change-o-matic-*
 - Library/Preferences/widget-com.apple*
 - Library/Printers
 - Library/PubSub
@@ -174,9 +179,7 @@
 - Library/Saved Application State/com.apple*
 - Library/Saved Application State/com.install4j.jdownloader*
 - Library/Saved Application State/com.parallels*
-- Library/Saved Application State/de.filezilla*
 - Library/Saved Application State/net.java.openjdk*
-- Library/Saved Application State/org.libreoffice*
 - Library/Services
 - Library/Screen Savers
 - Library/Sounds
@@ -184,6 +187,7 @@
 - Library/Spelling/dynamic-text.dat
 - Library/Spelling/LocalDictionary
 - Library/SyncedPreferences
+- Library/VirtualBox
 - Library/Voices
 - Library/WebKit
 - Library/Thunderbird/Crash Reports

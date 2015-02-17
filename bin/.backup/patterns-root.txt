@@ -15,8 +15,14 @@
 + usr/local/Cellar/
 + usr/local/Cellar/*
 + usr/local/etc/
-+ usr/local/etc/nginx/
-+ usr/local/etc/nginx/*.conf
++ usr/local/etc/**
++ usr/local/Library/
++ usr/local/Library/Taps/
++ usr/local/Library/Taps/homebrew/
++ usr/local/Library/Taps/homebrew/*
++ usr/local/lib/
++ usr/local/lib/node_modules/
++ usr/local/lib/node_modules/*
 + usr/local/mysql/
 + usr/local/mysql/data/
 + usr/local/mysql/data/**
@@ -28,4 +34,7 @@
 + usr/local/php5/lib/php.ini
 + usr/local/php5/php.d/
 + usr/local/php5/php.d/*
++ usr/local/var/
++ usr/local/var/mysql
++ usr/local/var/mysql/**
 - *

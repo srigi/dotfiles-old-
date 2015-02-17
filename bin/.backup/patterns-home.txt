@@ -34,7 +34,6 @@
 - Applications
 - Applications (Parallels)
 - Documents/.parallels-vm-directory
-- Downloads.trrnt
 - Dropbox/.dropbox.cache
 - Library/Accounts
 - Library/Address Book Plug-Ins
@@ -45,9 +44,9 @@
 - Library/Application Support/App Store
 - Library/Application Support/BitTorrent Sync/*.log
 - Library/Application Support/BitTorrent Sync/*.old
-- Library/Application Support/com.apple.QuickLook
-- Library/Application Support/com.apple.sbd
-- Library/Application Support/com.apple.TCC
+- Library/Application Support/CallHistory*
+- Library/Application Support/CloudDocs
+- Library/Application Support/com.apple.*
 - Library/Application Support/CrashReporter
 - Library/Application Support/Dock
 - Library/Application Support/eSellerate
@@ -69,6 +68,7 @@
 - Library/Application Support/OpenMeta
 - Library/Application Support/Oracle
 - Library/Application Support/Preview
+- Library/Application Support/Quick Look
 - Library/Application Support/Screen Sharing
 - Library/Application Support/SyncServices
 - Library/Application Support/Sublime Text 3/Backup
@@ -94,8 +94,19 @@
 - Library/Colors
 - Library/ColorSync
 - Library/Compositions
-- Library/Containers
++ Library/Containers/com.apple.BKAgentService/
++ Library/Containers/com.apple.BKAgentService/Data/
++ Library/Containers/com.apple.BKAgentService/Data/Documents/
++ Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/
++ Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books/
++ Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books/*
+- Library/Containers/*
+- Library/Containers/com.apple.BKAgentService/*
+- Library/Containers/com.apple.BKAgentService/Data/*
+- Library/Containers/com.apple.BKAgentService/Data/Documents/*
+- Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/*
 - Library/Cookies
+- Library/com.apple.*
 - Library/Developer
 - Library/Dictionaries
 - Library/Favorites
@@ -111,6 +122,7 @@
 - Library/iTunes
 - Library/Keyboard Layouts
 - Library/Keychains
+- Library/LanguageModeling
 - Library/LaunchAgents
 - Library/Logs
 - Library/Mail
@@ -141,6 +153,7 @@
 - Library/Preferences/*.screenflow*
 - Library/Preferences/*.switchresx*
 - Library/Preferences/*.tunnelblick*
+- Library/Preferences/callservicesd.plist
 - Library/Preferences/com.adobe*
 - Library/Preferences/com.apple*
 - Library/Preferences/com.binaryage.asepsis*

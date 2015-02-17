@@ -7,4 +7,5 @@
 # Load rbenv
 if which rbenv > /dev/null; then
 	eval "$(rbenv init -)";
+	[[ -s /usr/local/opt/rbenv/completions/rbenv.zsh ]] && source /usr/local/opt/rbenv/completions/rbenv.zsh
 fi

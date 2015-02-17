@@ -17,7 +17,7 @@
 	br = branch -v
 	s = status -sb
 	st = status
-	stat = status
+	optimise = !git prune && git gc --aggressive && git repack -a && git prune-packed
 
 	# checkout
 	co = checkout

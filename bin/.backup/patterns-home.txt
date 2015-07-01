@@ -4,6 +4,7 @@
 - .adobe
 - .bower
 - .cache
+- .config/browser-launcher2
 - .config/configstore
 - .composer/cache
 - .cordova
@@ -14,7 +15,6 @@
 - .fontconfig
 - .gem
 - .ionic
-- .lein
 - .lesshst
 - .local
 - .m2
@@ -47,6 +47,7 @@
 - Library/Application Support/CallHistory*
 - Library/Application Support/CloudDocs
 - Library/Application Support/com.apple.*
+- Library/Application Support/Console
 - Library/Application Support/CrashReporter
 - Library/Application Support/Dock
 - Library/Application Support/eSellerate
@@ -58,10 +59,8 @@
 - Library/Application Support/iLifeMediaBrowser
 - Library/Application Support/Kopsik
 - Library/Application Support/Librarian
-- Library/Application Support/Mail
 - Library/Application Support/MindVision
 - Library/Application Support/MobileSync
-- Library/Application Support/Mozilla
 - Library/Application Support/NotificationCenter
 - Library/Application Support/NVIDIA
 - Library/Application Support/Ofi Labs
@@ -70,17 +69,15 @@
 - Library/Application Support/Preview
 - Library/Application Support/Quick Look
 - Library/Application Support/Screen Sharing
-- Library/Application Support/SyncServices
 - Library/Application Support/Sublime Text 3/Backup
 - Library/Application Support/Sublime Text 3/Cache
+- Library/Application Support/Sublime Text 3/Index
+- Library/Application Support/SyncServices
 - Library/Application Support/Telestream
 - Library/Application Support/Ubiquity
 - Library/Application Support/uTorrent/apps
 - Library/Application Support/uTorrent/*.log
 - Library/Application Support/uTorrent/*.old
-- Library/Application Support/uTorrent/dht*.dat
-- Library/Application Support/uTorrent/ipfilter.dat
-- Library/Application Support/uTorrent/rss.dat
 - Library/Application Support/VisualVM
 - Library/Application Support/voice-change-o-matic-*
 - Library/Application Support/.TotalTerminalCrashWatcher.lock
@@ -89,7 +86,6 @@
 - Library/Audio
 - Library/Autosave Information
 - Library/Caches
-- Library/Calendars
 - Library/ColorPickers
 - Library/Colors
 - Library/ColorSync
@@ -121,21 +117,15 @@
 - Library/Internet Plug-Ins
 - Library/iTunes
 - Library/Keyboard Layouts
-- Library/Keychains
 - Library/LanguageModeling
-- Library/LaunchAgents
 - Library/Logs
-- Library/Mail
-- Library/Messages
 - Library/Metadata
 - Library/Mobile Documents
 - Library/MobileSafari
-- Library/Mozilla
 - Library/openvpn
 - Library/Parallels
 - Library/PhotoshopCrashes
 - Library/PreferencePanes
-- Library/Preferences/Adobe
 - Library/Preferences/Adobe*
 - Library/Preferences/ByHost/com.adobe*
 - Library/Preferences/ByHost/com.apple*
@@ -145,7 +135,6 @@
 - Library/Preferences/Parallels
 - Library/Preferences/PDAppFlex
 - Library/Preferences/StageManager*
-- Library/Preferences/quikio
 - Library/Preferences/.GlobalPreferences.plist
 - Library/Preferences/*crash*
 - Library/Preferences/*.ffmpegX*
@@ -156,11 +145,12 @@
 - Library/Preferences/callservicesd.plist
 - Library/Preferences/com.adobe*
 - Library/Preferences/com.apple*
+- Library/Preferences/com.artissoftware.mac.xScope*
 - Library/Preferences/com.binaryage.asepsis*
 - Library/Preferences/com.cineform*
 - Library/Preferences/com.derlien.DiskInventoryX*
 - Library/Preferences/com.eyePatch*
-- Library/Preferences/com.iconfactory.mac.xScope
+- Library/Preferences/com.iconfactory.mac.xScope*
 - Library/Preferences/com.install4j*
 - Library/Preferences/com.oracle.java*
 - Library/Preferences/com.parallels*
@@ -169,14 +159,12 @@
 - Library/Preferences/com.trolltech*
 - Library/Preferences/com.unity3d*
 - Library/Preferences/fr.madrau.switchres*
-- Library/Preferences/io.quik*
 - Library/Preferences/jetbrains.communicator*
 - Library/Preferences/loginwindow.plist
 - Library/Preferences/mbicloudsetup.plist
 - Library/Preferences/MobileMeAccounts.plist
 - Library/Preferences/net.nightproductions.prefSetter*
 - Library/Preferences/net.pornel.ImageOptim*
-- Library/Preferences/net.sourceforge*
 - Library/Preferences/org.cups*
 - Library/Preferences/xcode*
 - Library/Preferences/org.virtualbox*
@@ -184,7 +172,6 @@
 - Library/Preferences/UserEventAgent.plist
 - Library/Preferences/voice-change-o-matic-*
 - Library/Preferences/widget-com.apple*
-- Library/Printers
 - Library/PubSub
 - Library/quikio
 - Library/Safari
@@ -193,16 +180,16 @@
 - Library/Saved Application State/com.install4j.jdownloader*
 - Library/Saved Application State/com.parallels*
 - Library/Saved Application State/net.java.openjdk*
-- Library/Services
 - Library/Screen Savers
+- Library/Services
 - Library/Sounds
 - Library/Spelling/dynamic-counts.dat
 - Library/Spelling/dynamic-text.dat
 - Library/Spelling/LocalDictionary
 - Library/SyncedPreferences
+- Library/Thunderbird/Crash Reports
 - Library/VirtualBox
 - Library/Voices
 - Library/WebKit
-- Library/Thunderbird/Crash Reports
 - Movies/serialzz
 - Public

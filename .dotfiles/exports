@@ -1,8 +1,13 @@
-WHITE=$(tput setaf 0)
-MAGENTA=$(tput setaf 9)
-PURPLE=$(tput setaf 141)
-ORANGE=$(tput setaf 172)
-GREEN=$(tput setaf 190)
+if [ -t 1 ]; then           # check if stdout is a terminal
+    ncolors=$(tput colors)  # see if it supports colors
+    if test -n "$ncolors" && test $ncolors -ge 8; then
+        WHITE=$(tput setaf 0)
+        MAGENTA=$(tput setaf 9)
+        PURPLE=$(tput setaf 141)
+        ORANGE=$(tput setaf 172)
+        GREEN=$(tput setaf 190)
+    fi
+fi
 
 export PATH=$PATH:$HOME/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$(npm bin)
 export NODE_PATH=/usr/local/lib/node_modules

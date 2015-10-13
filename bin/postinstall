@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# based on revision 605a010
+# based on revision 2fe242b
 
 
 # Ask for the administrator password upfront
@@ -55,9 +55,6 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 # Reveal IP address, hostname, OS version when clicking the clock in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-# Disable Notification Center and remove the menu bar icon
-#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-
 # Disable smart quotes & dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
@@ -74,11 +71,11 @@ sudo tmutil disablelocal
 sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
-sudo rm /Private/var/vm/sleepimage
+sudo rm /private/var/vm/sleepimage
 # Create a zero-byte file instead…
-sudo touch /Private/var/vm/sleepimage
+sudo touch /private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
-sudo chflags uchg /Private/var/vm/sleepimage
+sudo chflags uchg /private/var/vm/sleepimage
 
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
@@ -87,6 +84,17 @@ sudo pmset -a sms 0
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
+
+# Enable tap to click for this user and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Disable “natural” (Lion-style) scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Enable full keyboard access for all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -119,7 +127,19 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 # Finder                                                                      #
 ###############################################################################
 
-# Finder: allow text selection in Quick Look
+# Show the ~/Library folder
+chflags nohidden ~/Library
+
+# Show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
 defaults write com.cocoatech.PathFinder QLEnableTextSelection -bool true
 
@@ -137,6 +157,11 @@ defaults write com.apple.frameworks.diskimages skip-verify -bool true
 defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
 defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
+# Enable snap-to-grid for icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
@@ -146,17 +171,45 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
-# Enable highlight hover effect for the grid view of a dock stack
+# Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
+
+# Set the icon size of Dock items
+defaults write com.apple.dock tilesize -int 42
 
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
 
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
+
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
 # Reset Launchpad
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
+
+# Hot corners
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+# top-left screen corner → Start screen saver
+defaults write com.apple.dock wvous-tl-corner -int 5
+#defaults write com.apple.dock wvous-tl-modifier -int 0
+# bottom-right screen corner → Put display to sleep
+defaults write com.apple.dock wvous-br-corner -int 10
+#defaults write com.apple.dock wvous-br-modifier -int 0
 
 
 ###############################################################################
@@ -203,6 +256,11 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
+
+# Display emails in threaded mode, sorted by date (oldest at the top)
+defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
+defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
+defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
 
 
 ###############################################################################

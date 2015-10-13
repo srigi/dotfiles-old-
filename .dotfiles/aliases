@@ -44,3 +44,8 @@ function t() {
 
 	eval $cmd $@
 }
+
+alias t2="t 2"
+alias t3="t 3"
+alias t4="t 4"
+alias t5="t 5"

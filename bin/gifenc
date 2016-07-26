@@ -1,8 +1,8 @@
 #!/bin/sh
 
+file=$1
+filters="fps=8,scale=460:-1:flags=lanczos"
 palette="/tmp/palette.png"
 
-filters="fps=15,scale=560:-1:flags=lanczos"
-
-ffmpeg -v warning -i $1 -vf "$filters,palettegen" -y $palette
-ffmpeg -v warning -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -y $2
+ffmpeg -i $file -vf "$filters,palettegen" -y $palette
+ffmpeg -v warning -i $file -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -y "${file%.*}.gif"

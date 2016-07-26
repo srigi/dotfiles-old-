@@ -1,5 +1,6 @@
 SEGMENT_SEPARATOR='⮀'
 CURRENT_BG='NONE'
+DISABLE_UNTRACKED_FILES_DIRTY=true
 
 # Begin a segment
 # @argument background color
@@ -53,15 +54,9 @@ function prompt_git {
   fi
 }
 
-# Paint current RVM Ruby & gemset
-function prompt_rvm {
-  prompt_segment 24 146 `rvm-prompt v p g`
-}
-
 function build_prompt() {
   prompt_context
   prompt_dir
-  #prompt_rvm
   prompt_git
   prompt_end
 }

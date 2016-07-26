@@ -15,7 +15,7 @@
 	helper = osxkeychain
 
 [alias]
-	br = branch -v
+	br = branch -vv
 	s = status -sb
 	st = status
 	optimise = !git prune && git gc --aggressive && git repack -a && git prune-packed
@@ -38,6 +38,7 @@
 	l = log --graph --pretty=format:'%Cred%h%Creset | %Cgreen%cr%Creset |%C(yellow)%d%Creset %s %C(magenta)<%an>%Creset' --abbrev-commit
 	ll = !"git l --name-status"
 	lll = !"git l --stat"
+	mystats = log --author="Igor Hlina" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
 	changelog = log --pretty=format:' * %s'
 
 	# rebase
@@ -53,6 +54,9 @@
 	# swap you back to the branch you started on
 	#  usage: git save foobar
 	save = !sh -c 'export PREV=$(git symbolic-ref HEAD|cut -d/ -f3-) && git checkout -b "$1" && git commit -am "$1" && git checkout "$PREV"' -
+
+	#tags
+	tags = show-ref --tags
 
 [color]
 	ui = true

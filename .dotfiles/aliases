@@ -1,28 +1,23 @@
 # shortcuts
+alias c='pygmentize -O style=monokai -f console256 -g'
 alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
 alias s="subl ."
 
-alias c='pygmentize -O style=monokai -f console256 -g'
+alias cleanup="find $HOME -type f -name '*.DS_Store' -ls -delete"  	# recursively delete `.DS_Store` files from $HOME
 alias ls='gls -lAFh --color --group-directories-first'
-alias lsa='gls -lFh --color --group-directories-first'
+alias sudo='sudo '													# enable aliases to be sudo’ed
+#alias sudo='A=`alias` sudo env '									# save current ENV when sudo
+
+alias composer="php -n -d extension=/usr/local/opt/php56-gmp/gmp.so ~/bin/composer.phar"
 alias npmls="npm list --depth=0 2>/dev/null"
 alias npmo="npm outdated --depth 0"
-alias sudo='sudo '												# enable aliases to be sudo’ed
-#alias sudo='A=`alias` sudo env '								# save current ENV when sudo
-alias irb='irb --readline -r irb/completion'
+
+# networking aliases
+alias flush="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+alias httpdump="sudo tcpdump -i lo0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 alias lsports='lsof -Pni4 | grep LISTEN'
 alias lsportss='netstat -an | grep LISTEN'
-
-# recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-# flush Directory Service cache
-alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
-
-# view HTTP traffic
-alias sniff="sudo ngrep -d 'lo0' -t '^(DELETE|GET|OPTIONS|POST|PUT) ' 'tcp and port 8000'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias sniff="sudo ngrep -d 'lo0' -t '^(DELETE|GET|OPTIONS|POST|PUT) ' 'tcp and port 80'"
 
 # intuitive map function
 # for example, to list all directories that contain a certain file:

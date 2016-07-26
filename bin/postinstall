@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# based on revision 2fe242b
+# based on revision 513f809
 
 
 # Ask for the administrator password upfront
@@ -28,6 +28,9 @@ sudo pmset -a standbydelay 86400
 
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+
+# Disable the over-the-top focus ring animation
+defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -129,6 +132,9 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
+
+# Show the /Volumes folder
+sudo chflags nohidden /Volumes
 
 # Show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -270,7 +276,30 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -stri
 # Disable Spotlight indexing for any unidexed volume that gets mounted
 #  Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing particular volume
 sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
-
+# Change indexing order and disable some search results
+defaults write com.apple.spotlight orderedItems -array \
+	'{"enabled" = 1;"name" = "APPLICATIONS";}' \
+	'{"enabled" = 1;"name" = "CONTACT";}' \
+	'{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
+	'{"enabled" = 0;"name" = "BOOKMARKS";}' \
+	'{"enabled" = 0;"name" = "DIRECTORIES";}' \
+	'{"enabled" = 0;"name" = "DOCUMENTS";}' \
+	'{"enabled" = 0;"name" = "EVENT_TODO";}' \
+	'{"enabled" = 0;"name" = "FONTS";}' \
+	'{"enabled" = 0;"name" = "IMAGES";}' \
+	'{"enabled" = 0;"name" = "MESSAGES";}' \
+	'{"enabled" = 0;"name" = "MUSIC";}' \
+	'{"enabled" = 0;"name" = "MOVIES";}' \
+	'{"enabled" = 0;"name" = "PDF";}' \
+	'{"enabled" = 0;"name" = "PRESENTATIONS";}' \
+	'{"enabled" = 0;"name" = "SPREADSHEETS";}' \
+	'{"enabled" = 0;"name" = "SOURCE";}' \
+	'{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
+	'{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
+	'{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
+	'{"enabled" = 0;"name" = "MENU_OTHER";}' \
+	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
+	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 # Load new settings before rebuilding the index
 killall mds > /dev/null 2>&1
 # Make sure indexing is enabled for the main volume
@@ -329,6 +358,14 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
 
 ###############################################################################
+# Photos                                                                      #
+###############################################################################
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+
+###############################################################################
 # Messages                                                                    #
 ###############################################################################
 
@@ -343,8 +380,8 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Activity Monitor" "cfprefsd" "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" "Terminal"; do
-	killall "${app}" > /dev/null 2>&1
+for app in "Activity Monitor" "cfprefsd" "Dock" "Finder" "Mail" "Messages" "Photos" "Safari" "SystemUIServer" "Terminal"; do
+	killall "${app}" &> /dev/null
 done
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."

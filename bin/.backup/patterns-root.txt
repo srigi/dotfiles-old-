@@ -12,6 +12,8 @@
 + private/etc/apache2/users/*
 + private/etc/hosts
 + private/etc/paths
++ private/etc/resolver
++ private/etc/resolver/*
 + usr/
 + usr/local/
 + usr/local/Cellar/

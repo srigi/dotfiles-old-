@@ -11,6 +11,7 @@
 *dump*
 *history
 *hst
+.DS_Store
 .netrc
 .rnd
 .viminfo

@@ -37,6 +37,13 @@ source $ZSH/oh-my-zsh.sh
 # Load directory jumper Z
 [[ -s "$HOME/bin/z.sh" ]] && source "$HOME/bin/z.sh"
 
+# Load rbenv
+if which rbenv > /dev/null; then
+	eval "$(rbenv init -)";
+	[[ -s /usr/local/opt/rbenv/completions/rbenv.zsh ]] && source /usr/local/opt/rbenv/completions/rbenv.zsh
+fi
+
+
 if [ -t 1 ]; then           # check if stdout is a terminal
 	ncolors=$(tput colors)  # see if it supports colors
 

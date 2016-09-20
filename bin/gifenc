@@ -1,7 +1,7 @@
 #!/bin/sh
 
 file=$1
-filters="fps=8,scale=460:-1:flags=lanczos"
+filters="fps=8,scale=760:-1:flags=lanczos"
 palette="/tmp/palette.png"
 
 ffmpeg -i $file -vf "$filters,palettegen" -y $palette

@@ -8,7 +8,7 @@ alias ls='gls -lAFh --color --group-directories-first'
 alias sudo='sudo '													# enable aliases to be sudo’ed
 #alias sudo='A=`alias` sudo env '									# save current ENV when sudo
 
-alias composer="php -n -d extension=/usr/local/opt/php56-gmp/gmp.so ~/bin/composer.phar"
+alias composer="php -n -c ~/.dotfiles/php.cli.ini ~/bin/composer.phar"
 alias npmls="npm list --depth=0 2>/dev/null"
 alias npmo="npm outdated --depth 0"
 

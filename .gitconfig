@@ -35,7 +35,7 @@
 	last = diff HEAD^
 
 	# log
-	l = log --graph --pretty=format:'%Cred%h%Creset | %Cgreen%cr%Creset |%C(yellow)%d%Creset %s %C(magenta)<%an>%Creset' --abbrev-commit
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	ll = !"git l --name-status"
 	lll = !"git l --stat"
 	mystats = log --author="Igor Hlina" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -

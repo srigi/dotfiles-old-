@@ -24,6 +24,14 @@ alias sniff="sudo ngrep -d 'lo0' -t '^(DELETE|GET|OPTIONS|POST|PUT) ' 'tcp and p
 #   find . -name .gitattributes | map dirname
 alias map="xargs -n1"
 
+function cdf() {
+	target=`osascript -e 'tell application "Path Finder" to if (count of Finder windows) > 0 then get POSIX path of the target of the front finder window'`
+	if [ "$target" != "" ]; then
+		cd "$target"; pwd
+	else
+		echo 'No Path Finder window found' >&2
+	fi
+}
 
 function t() {
 	ignore='"node_modules|.git"'

@@ -40,7 +40,6 @@
 - Documents/.parallels-vm-directory
 - Dropbox/.dropbox.cache
 - Library/Address Book Plug-Ins Disabled
-- Library/Accounts
 - Library/Address Book Plug-Ins
 - Library/Application Scripts
 - Library/Application Support/AddressBook
@@ -154,7 +153,6 @@
 - Library/Preferences/*.mplayer*
 - Library/Preferences/*.screenflow*
 - Library/Preferences/*.switchresx*
-- Library/Preferences/*.tunnelblick*
 - Library/Preferences/callservicesd.plist
 - Library/Preferences/com.adobe*
 - Library/Preferences/com.apple*
@@ -169,9 +167,7 @@
 - Library/Preferences/com.parallels*
 - Library/Preferences/com.qtproject*
 - Library/Preferences/com.solidstatenetworks*
-- Library/Preferences/com.trolltech*
 - Library/Preferences/com.unity3d*
-- Library/Preferences/fr.madrau.switchres*
 - Library/Preferences/jetbrains.communicator*
 - Library/Preferences/loginwindow.plist
 - Library/Preferences/mbicloudsetup.plist

@@ -42,7 +42,8 @@
 	changelog = log --pretty=format:' * %s'
 
 	# rebase
-	rbi = rebase -i
+	rib = rebase -i --autostash
+	rbi = rebase -i --autostash
 	rbc = rebase --continue
 	rbs = rebase --skip
 

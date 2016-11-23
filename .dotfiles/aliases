@@ -15,7 +15,7 @@ alias npmo="npm outdated --depth 0"
 # networking aliases
 alias flush="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias httpdump="sudo tcpdump -i lo0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-alias lsports='lsof -Pni4 | grep LISTEN'
+alias lsports='lsof -Pn -i4 -i6 | grep LISTEN'
 alias lsportss='netstat -an | grep LISTEN'
 alias sniff="sudo ngrep -d 'lo0' -t '^(DELETE|GET|OPTIONS|POST|PUT) ' 'tcp and port 80'"
 

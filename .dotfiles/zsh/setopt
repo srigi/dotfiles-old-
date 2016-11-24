@@ -1,6 +1,7 @@
 # File completion
-setopt AUTOLIST                # vypisuje možnosti pro doplnění
-setopt NO_LIST_AMBIGUOUS       # vypisuje je HNED, ne až při druhém <Tab>
+setopt AUTOLIST                # show autosuggestion menu
+setopt NO_LIST_AMBIGUOUS       # show autosuggestion on first <TAB> keypress
+setopt RM_STAR_WAIT            # wait 10 seconds if you're deleting everything
 #setopt auto_cd                 # Change dir without cd
 setopt extended_glob           # Regex globbing
 #setopt notify                  # Report the status if background jobs immediately

@@ -1,17 +1,18 @@
+export EDITOR=vim
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export POSTGRES_PATH=/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH=$POSTGRES_PATH:$PATH:$HOME/bin
-export NODE_PATH=/usr/local/lib/node_modules
-export EDITOR=vim
 export JAVA_HOME="$(/usr/libexec/java_home)"
+export NODE_PATH=/usr/local/lib/node_modules
 export RBENV_ROOT=/usr/local/var/rbenv
 
+export HISTCONTROL=ignoredups
 export HISTSIZE=50000
 export HISTFILESIZE=$(expr $HISTSIZE \* 50)
-export HISTCONTROL=ignoredups
-export HISTIGNORE='ls:cd:cd -:pwd:exit:date:* --help'
+export HISTIGNORE="cd:cd -:date:docker exec -ti *:docker rm *:docker rmi *:docker stop *:exit:ls:pwd:s:..:...:* --help"
+export HISTORY_IGNORE="(cd|cd -|date|docker exec -ti *|docker rm *|docker rmi *|docker stop *|exit|ls|pwd|s|..|...|* --help)"
 
 export MANPAGER='less -X'  # don’t clear the screen after quitting man

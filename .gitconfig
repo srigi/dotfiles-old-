@@ -44,6 +44,7 @@
 	# rebase
 	rib = rebase -i --autostash
 	rbi = rebase -i --autostash
+	rba = rebase --abort
 	rbc = rebase --continue
 	rbs = rebase --skip
 

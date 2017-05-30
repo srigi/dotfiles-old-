@@ -1,5 +1,4 @@
 # shortcuts
-alias c='pygmentize -O style=monokai -f console256 -g'
 alias dl="cd ~/Downloads"
 alias s="subl ."
 

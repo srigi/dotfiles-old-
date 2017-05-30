@@ -11,16 +11,13 @@ ZSH="$HOME/.dotfiles/zsh/oh-my-zsh"
 # Set name of the theme to load
 ZSH_THEME="../../themes/srigi"
 
-# Disable auto-update checks
-#DISABLE_AUTO_UPDATE="true"
-
 # Update interval
 export UPDATE_ZSH_DAYS=30
 
 # Disable autosetting terminal title
 DISABLE_AUTO_TITLE="true"
 
-plugins=(brew cp gitfast)
+plugins=(cp gitfast)
 
 # Load OH MY ZSH
 source $ZSH/oh-my-zsh.sh

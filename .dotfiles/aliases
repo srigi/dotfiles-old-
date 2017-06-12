@@ -1,4 +1,5 @@
 # shortcuts
+alias dc="docker-compose"
 alias dl="cd ~/Downloads"
 alias s="subl ."
 

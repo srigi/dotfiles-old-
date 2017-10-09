@@ -16,6 +16,7 @@
 
 [alias]
 	br = branch -vv
+	conflicts = diff --name-only --diff-filter=U
 	s = status -sb
 	st = status
 	optimise = !git prune && git gc --aggressive && git repack -a && git prune-packed
@@ -86,7 +87,12 @@
 	# Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
 	# instead of a/b/c/d as prefixes for patches
 	mnemonicprefix = true
+	compactionHeuristic = on
+	indentHeuristic = on
 
 [push]
 	# don't push all local branches, only ones that are already on remote
 	default = tracking
+
+[rerere]
+	enabled = true

@@ -1,5 +1,5 @@
 [user]
-	name = Igor Hlina
+	name = srigi
 	email = srigi@srigi.sk
 
 [core]
@@ -36,9 +36,10 @@
 
 	# log
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lme = !"git l --author='srigi'"
 	ll = !"git l --name-status"
 	lll = !"git l --stat"
-	mystats = log --author="Igor Hlina" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+	mystats = log --author='srigi' --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
 	changelog = log --pretty=format:' * %s'
 
 	# rebase

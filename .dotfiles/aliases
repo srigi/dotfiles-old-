@@ -33,6 +33,10 @@ function cdf() {
 	fi
 }
 
+function randstr() {
+	cat /dev/urandom | gtr -dc 'a-zA-Z0-9!@#$%^&*()-_=+[{}];:\|`~,<>./?' | fold -w ${1:-16} | head -n 1
+}
+
 function t() {
 	ignore='"node_modules|.git"'
 	cmd="tree -a -C --dirsfirst -I $ignore"

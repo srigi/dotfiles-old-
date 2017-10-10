@@ -2,32 +2,25 @@
 - .Trash
 - .localized
 - .adobe
-- .bower
 - .cache
 - .config/browser-launcher2
 - .config/configstore
 - .composer/cache
-- .cordova
 - .cups
 - .distlib
 - .dropbox
 - .dropbox-master
 - .fontconfig
 - .gem
-- .ionic
 - .lesshst
 - .local
-- .m2
-- .mplayer
 - .nano
 - .node-gyp
 - .npm
 - .oracle_jre_usage
-- .plugman
 - .putty
 - .rnd
 - .rbenv
-- .rvm
 - .spumux
 - .subversion
 - .sass-cache
@@ -39,37 +32,53 @@
 - Applications (Parallels)
 - Documents/.parallels-vm-directory
 - Dropbox/.dropbox.cache
-- Library/Address Book Plug-Ins Disabled
+- Library/Accounts
 - Library/Address Book Plug-Ins
+- Library/Address Book Plug-Ins Disabled
 - Library/Application Scripts
+- Library/Application Support/accountsd
 - Library/Application Support/AddressBook
 - Library/Application Support/Adobe
 - Library/Application Support/Apple
 - Library/Application Support/App Store
-- Library/Application Support/BitTorrent Sync/*.log
-- Library/Application Support/BitTorrent Sync/*.old
-- Library/Application Support/CallHistory*
+- Library/Application Support/CallHistoryDB
+- Library/Application Support/CallHistoryTransactions
+- Library/Application Support/CCleaner
 - Library/Application Support/CEF
+- Library/Application Support/CleanMyMac 3 Menu
 - Library/Application Support/CloudDocs
 - Library/Application Support/com.apple.*
 - Library/Application Support/com.crashlytics
-- Library/Application Support/com.iMobie.SilentCleanServer
 - Library/Application Support/Console
 - Library/Application Support/CrashReporter
+- Library/Application Support/DiskImages
 - Library/Application Support/Dock
-- Library/Application Support/eSellerate
-- Library/Application Support/Feral Interactive
-- Library/Application Support/Firefox/Crash Reports
+- Library/Application Support/Firefox
+- Library/Application Support/Flux
+- Library/Application Support/Google/Chrome/BrowserMetrics-spare.pma
+- Library/Application Support/Google/Chrome/CertificateTransparency
+- Library/Application Support/Google/Chrome/Crashpad
+- Library/Application Support/Google/Chrome/Default/*.log
+- Library/Application Support/Google/Chrome/Default/Application Cache
+- Library/Application Support/Google/Chrome/Default/Extension State/*.log
+- Library/Application Support/Google/Chrome/Default/GPUCache
+- Library/Application Support/Google/Chrome/Default/Local Storage
+- Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage
+- Library/Application Support/Google/Chrome/Default/Session Storage
+- Library/Application Support/Google/Chrome/Default/Thumbnails
+- Library/Application Support/Google/Chrome/ShaderCache
+- Library/Application Support/Google/Chrome/WidevineCdm
+- Library/Application Support/Google/RLZ
 - Library/Application Support/Google Earth
+- Library/Application Support/icdd
 - Library/Application Support/iCloud
-- Library/Application Support/iLifeAssetManagement
-- Library/Application Support/iLifeMediaBrowser
-- Library/Application Support/Kopsik
+- Library/Application Support/JetBrains
+- Library/Application Support/Knowledge
 - Library/Application Support/Librarian
-- Library/Application Support/MindVision
+- Library/Application Support/Logitech
 - Library/Application Support/MobileSync
+- Library/Application Support/Mozilla
 - Library/Application Support/NotificationCenter
-- Library/Application Support/NVIDIA
 - Library/Application Support/Ofi Labs
 - Library/Application Support/OpenMeta
 - Library/Application Support/Oracle
@@ -77,45 +86,49 @@
 - Library/Application Support/Quick Look
 - Library/Application Support/Screen Sharing
 - Library/Application Support/Skype.app
+- Library/Application Support/Spotify/PersistentCache
+- Library/Application Support/Spotify/User Data
+- Library/Application Support/Spotify/Users
+- Library/Application Support/Spotify/SpotifyWebHelper
+- Library/Application Support/Spotify/Stay/Backups
+- Library/Application Support/Spotify/Stay/Screenshots
 - Library/Application Support/Sublime Text 3/Backup
 - Library/Application Support/Sublime Text 3/Cache
 - Library/Application Support/Sublime Text 3/Index
 - Library/Application Support/SyncServices
+- Library/Application Support/sushi-browser/Cache
+- Library/Application Support/sushi-browser/GPUCache
+- Library/Application Support/sushi-browser/IndexedDb
+- Library/Application Support/sushi-browser/Local Storage
+- Library/Application Support/sushi-browser/Session Storage
+- Library/Application Support/sushi-browser/ShaderCache
 - Library/Application Support/Telestream
 - Library/Application Support/Ubiquity
 - Library/Application Support/uTorrent/apps
 - Library/Application Support/uTorrent/*.log
 - Library/Application Support/uTorrent/*.old
-- Library/Application Support/VisualVM
 - Library/Application Support/voice-change-o-matic-*
-- Library/Application Support/.TotalTerminalCrashWatcher.lock
-- Library/Application Support/.TotalSpacesCrashWatcher.lock
+- Library/Assistant
 - Library/Assistants
 - Library/Audio
 - Library/Autosave Information
 - Library/Caches
+- Library/Calendars
+- Library/CallServices
 - Library/ColorPickers
 - Library/Colors
 - Library/ColorSync
 - Library/Compositions
-+ Library/Containers/com.apple.BKAgentService/
-+ Library/Containers/com.apple.BKAgentService/Data/
-+ Library/Containers/com.apple.BKAgentService/Data/Documents/
-+ Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/
-+ Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books/
-+ Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books/*
-- Library/Containers/*
-- Library/Containers/com.apple.BKAgentService/*
-- Library/Containers/com.apple.BKAgentService/Data/*
-- Library/Containers/com.apple.BKAgentService/Data/Documents/*
-- Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/*
+- Library/Containers
 - Library/Cookies
 - Library/CoreData
 - Library/CoreFollowUp
 - Library/com.apple.*
 - Library/Developer
 - Library/Dictionaries
+- Library/Family
 - Library/Favorites
+- Library/FileProvider
 - Library/FontCollections
 - Library/Frameworks
 - Library/GameKit
@@ -123,19 +136,27 @@
 - Library/Group Containers
 - Library/Icons
 - Library/IdentityServices
+- Library/iMovie
 - Library/Input Methods
 - Library/Internet Plug-Ins
-- Library/iMovie
+- Library/Internet Plug-ins Disabled
 - Library/iTunes
+- Library/KeyboardServices
 - Library/Keyboard Layouts
 - Library/LanguageModeling
 - Library/Logs
+- Library/Mail
+- Library/Maps
 - Library/Metadata
-- Library/Mobile Documents
++ Library/Mobile Documents/iCloud~com~apple~iBooks
+- Library/Mobile Documents/*
 - Library/MobileSafari
 - Library/Mozilla
+- Library/Network
 - Library/openvpn
 - Library/Parallels
+- Library/Passes
+- Library/Personas
 - Library/PhotoshopCrashes
 - Library/PreferencePanes
 - Library/Preferences/Adobe*
@@ -145,52 +166,58 @@
 - Library/Preferences/ExtendScript Toolkit
 - Library/Preferences/Macromedia
 - Library/Preferences/Parallels
-- Library/Preferences/PDAppFlex
-- Library/Preferences/StageManager*
 - Library/Preferences/.GlobalPreferences.plist
 - Library/Preferences/*crash*
-- Library/Preferences/*.ffmpegX*
 - Library/Preferences/*.mplayer*
 - Library/Preferences/*.screenflow*
-- Library/Preferences/*.switchresx*
 - Library/Preferences/callservicesd.plist
 - Library/Preferences/com.adobe*
 - Library/Preferences/com.apple*
 - Library/Preferences/com.artissoftware.mac.xScope*
-- Library/Preferences/com.binaryage.asepsis*
 - Library/Preferences/com.cineform*
 - Library/Preferences/com.derlien.DiskInventoryX*
+- Library/Preferences/com.docker.docker.plist
 - Library/Preferences/com.eyePatch*
+- Library/Preferences/com.google.Keystone.Agent.plist
 - Library/Preferences/com.iconfactory.mac.xScope*
 - Library/Preferences/com.install4j*
+- Library/Preferences/com.Logitech.*
+- Library/Preferences/com.logitech.*
+- Library/Preferences/com.macpaw.CleanMyMac3.*
 - Library/Preferences/com.oracle.java*
 - Library/Preferences/com.parallels*
 - Library/Preferences/com.qtproject*
+- Library/Preferences/com.rescuetime.*
+- Library/Preferences/com.rouge41.middleClick.plist
 - Library/Preferences/com.solidstatenetworks*
 - Library/Preferences/com.unity3d*
+- Library/Preferences/info.marcel-dierkes.KeepingYouAwake.plist
 - Library/Preferences/jetbrains.communicator*
+- Library/Preferences/knowledge-agent.plist
 - Library/Preferences/loginwindow.plist
 - Library/Preferences/mbicloudsetup.plist
 - Library/Preferences/MobileMeAccounts.plist
 - Library/Preferences/net.nightproductions.prefSetter*
 - Library/Preferences/net.pornel.ImageOptim*
 - Library/Preferences/org.cups*
+- Library/Preferences/org.mozilla.firefox.plist
+- Library/Preferences/pbs.plist
+- Library/Preferences/rtcpal_registry.reg
 - Library/Preferences/xcode*
 - Library/Preferences/org.virtualbox*
 - Library/Preferences/QuickTime*
 - Library/Preferences/UserEventAgent.plist
 - Library/Preferences/voice-change-o-matic-*
 - Library/Preferences/widget-com.apple*
+- Library/Printers
 - Library/PubSub
-- Library/quikio
+- Library/RescueTime.com
 - Library/Safari
-- Library/Saved Application State/com.adobe*
-- Library/Saved Application State/com.apple*
-- Library/Saved Application State/com.install4j.jdownloader*
-- Library/Saved Application State/com.parallels*
-- Library/Saved Application State/net.java.openjdk*
+- Library/SafariSafeBrowsing
+- Library/Saved Application State
 - Library/Saved Searches
 - Library/Screen Savers
+- Library/Sharing
 - Library/Services
 - Library/Sounds
 - Library/Spelling/dynamic-counts.dat
@@ -198,9 +225,9 @@
 - Library/Spelling/LocalDictionary
 - Library/Suggestions
 - Library/SyncedPreferences
+- Library/Synergy
 - Library/Thunderbird/Crash Reports
 - Library/VirtualBox
 - Library/Voices
 - Library/WebKit
-- Movies/serialzz
 - Public

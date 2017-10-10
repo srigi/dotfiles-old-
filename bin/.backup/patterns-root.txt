@@ -1,3 +1,9 @@
++ Library/
++ Library/LaunchAgents/
++ Library/LaunchAgents/*
++ Library/LaunchDaemons
++ Library/LaunchDaemons/
++ Library/LaunchDaemons/*
 + private/
 + private/etc/
 + private/etc/hosts

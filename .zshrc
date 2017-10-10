@@ -42,8 +42,9 @@ if which rbenv > /dev/null; then
 fi
 
 # Load lunchy tab-completion
-LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
-[[ -s "$LUNCHY_DIR/lunchy-completion.zsh" ]] && source "$LUNCHY_DIR/lunchy-completion.zsh"
+LUNCHY=$(gem which lunchy 2>/dev/null)
+[[ -n $LUNCHY ]] && LUNCHY_EXTRAS="$(dirname $LUNCHY)/../extras"
+[[ -n $LUNCHY_EXTRAS && -r "$LUNCHY_EXTRAS/lunchy-completion.zsh" ]] && source "$LUNCHY_EXTRAS/lunchy-completion.zsh"
 
 if [ -t 1 ]; then           # check if stdout is a terminal
 	ncolors=$(tput colors)  # see if it supports colors

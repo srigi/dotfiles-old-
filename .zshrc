@@ -17,7 +17,7 @@ export UPDATE_ZSH_DAYS=30
 # Disable autosetting terminal title
 DISABLE_AUTO_TITLE="true"
 
-plugins=(cp gitfast)
+plugins=(cp docker docker-compose gitfast z)
 
 # Load OH MY ZSH
 source $ZSH/oh-my-zsh.sh
@@ -31,9 +31,6 @@ export HISTSIZE=50000  # reapply my HISTSIZE
 
 # Load aliases
 [[ -s "$HOME/.dotfiles/zsh/aliases" ]] && source "$HOME/.dotfiles/zsh/aliases"
-
-# Load directory jumper Z
-[[ -s "$HOME/bin/z.sh" ]] && source "$HOME/bin/z.sh"
 
 # Load rbenv
 if which rbenv > /dev/null; then

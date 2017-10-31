@@ -1,30 +1,28 @@
-- .DS_Store
-- .Trash
-- .localized
 - .adobe
 - .cache
+- .composer/cache
 - .config/browser-launcher2
 - .config/configstore
-- .composer/cache
 - .cups
 - .distlib
 - .dropbox
 - .dropbox-master
+- .DS_Store
 - .fontconfig
 - .gem
 - .lesshst
 - .local
+- .localized
 - .nano
 - .node-gyp
 - .npm
-- .oracle_jre_usage
 - .putty
-- .rnd
 - .rbenv
+- .rnd
 - .spumux
 - .subversion
-- .sass-cache
 - .tdb
+- .Trash
 - .v8flags*.json
 - .wakatime
 - .zcompdump*
@@ -60,12 +58,16 @@
 - Library/Application Support/Google/Chrome/Crashpad
 - Library/Application Support/Google/Chrome/Default/*.log
 - Library/Application Support/Google/Chrome/Default/Application Cache
-- Library/Application Support/Google/Chrome/Default/Extension State/*.log
+- Library/Application Support/Google/Chrome/Default/Extensions
+- Library/Application Support/Google/Chrome/Default/Extension State
 - Library/Application Support/Google/Chrome/Default/GPUCache
+- Library/Application Support/Google/Chrome/Default/IndexedDB
+- Library/Application Support/Google/Chrome/Default/Local Extension Settings
 - Library/Application Support/Google/Chrome/Default/Local Storage
-- Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage
+- Library/Application Support/Google/Chrome/Default/Service Worker
 - Library/Application Support/Google/Chrome/Default/Session Storage
 - Library/Application Support/Google/Chrome/Default/Thumbnails
+- Library/Application Support/Google/Chrome/PepperFlash
 - Library/Application Support/Google/Chrome/ShaderCache
 - Library/Application Support/Google/Chrome/WidevineCdm
 - Library/Application Support/Google/RLZ
@@ -87,21 +89,21 @@
 - Library/Application Support/Screen Sharing
 - Library/Application Support/Skype.app
 - Library/Application Support/Spotify/PersistentCache
-- Library/Application Support/Spotify/User Data
-- Library/Application Support/Spotify/Users
 - Library/Application Support/Spotify/SpotifyWebHelper
 - Library/Application Support/Spotify/Stay/Backups
 - Library/Application Support/Spotify/Stay/Screenshots
+- Library/Application Support/Spotify/Users
+- Library/Application Support/Spotify/User Data
 - Library/Application Support/Sublime Text 3/Backup
 - Library/Application Support/Sublime Text 3/Cache
 - Library/Application Support/Sublime Text 3/Index
 - Library/Application Support/SyncServices
-- Library/Application Support/sushi-browser/Cache
-- Library/Application Support/sushi-browser/GPUCache
-- Library/Application Support/sushi-browser/IndexedDb
-- Library/Application Support/sushi-browser/Local Storage
-- Library/Application Support/sushi-browser/Session Storage
-- Library/Application Support/sushi-browser/ShaderCache
+- Library/Application Support/sushiBrowser/Cache
+- Library/Application Support/sushiBrowser/GPUCache
+- Library/Application Support/sushiBrowser/IndexedDb
+- Library/Application Support/sushiBrowser/Local Storage
+- Library/Application Support/sushiBrowser/Session Storage
+- Library/Application Support/sushiBrowser/ShaderCache
 - Library/Application Support/Telestream
 - Library/Application Support/Ubiquity
 - Library/Application Support/uTorrent/apps
@@ -118,12 +120,12 @@
 - Library/ColorPickers
 - Library/Colors
 - Library/ColorSync
+- Library/com.apple.*
 - Library/Compositions
 - Library/Containers
 - Library/Cookies
 - Library/CoreData
 - Library/CoreFollowUp
-- Library/com.apple.*
 - Library/Developer
 - Library/Dictionaries
 - Library/Family

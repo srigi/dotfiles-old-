@@ -39,6 +39,7 @@ LUNCHY=$(gem which lunchy 2>/dev/null)
 [[ -n $LUNCHY ]] && LUNCHY_EXTRAS="$(dirname $LUNCHY)/../extras"
 [[ -n $LUNCHY_EXTRAS && -r "$LUNCHY_EXTRAS/lunchy-completion.zsh" ]] && source "$LUNCHY_EXTRAS/lunchy-completion.zsh"
 
+# Highlight section titles in man
 if [ -t 1 ]; then           # check if stdout is a terminal
 	ncolors=$(tput colors)  # see if it supports colors
 
@@ -49,6 +50,6 @@ if [ -t 1 ]; then           # check if stdout is a terminal
 		ORANGE=$(tput setaf 172)
 		GREEN=$(tput setaf 190)
 
-		export LESS_TERMCAP_md=$ORANGE  # highlight section titles in man
+		export LESS_TERMCAP_md=$ORANGE
 	fi
 fi

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo -v
+tmutil listlocalsnapshots / | awk -F "." '/1/ {print $4}' | xargs -n1 tmutil deletelocalsnapshots

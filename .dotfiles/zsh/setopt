@@ -3,10 +3,14 @@
 # History opts
 setopt APPEND_HISTORY          # Allow multiple sessions to append to the history file
 #setopt EXTENDED_HISTORY        # Save additional info to history file
+setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_ALL_DUPS    # Ignore dups in command history
 setopt HIST_IGNORE_SPACE       # Don't add commands prepended by whitespace to history
+setopt HIST_REDUCE_BLANKS      # Remove superfluous blanks from each command line being added to the history
+setopt HIST_SAVE_NO_DUPS       # When flushing the history file, duplicates are omitted
 #setopt HIST_VERIFY             # When using ! cmds, confirm first
 setopt INC_APPEND_HISTORY      # Append commands to history immediately
+setopt SHARE_HISTORY            # Share history across terminals
 
 setopt ALWAYS_TO_END           # When complete from middle, move cursor
 #setopt AUTO_CD                 # Change dir without cd

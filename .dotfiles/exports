@@ -9,9 +9,11 @@ export NODE_PATH=/usr/local/lib/node_modules
 export RBENV_ROOT=/usr/local/var/rbenv
 
 export HISTCONTROL=ignoredups
+export HISTDUP=erase
 export HISTSIZE=50000
 export HISTFILESIZE=$(expr $HISTSIZE \* 50)
 export HISTIGNORE="cd:cd -:date:docker exec -ti *:docker rm *:docker rmi *:docker stop *:exit:ls:pwd:s:..:...:* --help"
 export HISTORY_IGNORE="(cd|cd -|date|docker exec -ti *|docker rm *|docker rmi *|docker stop *|exit|ls|pwd|s|..|...|* --help)"
+export SAVEHIST=$(expr $HISTSIZE \* 50)
 
 export MANPAGER='less -X'  # don’t clear the screen after quitting man

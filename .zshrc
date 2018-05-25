@@ -13,7 +13,7 @@ export UPDATE_ZSH_DAYS=30
 # Disable autosetting terminal title
 DISABLE_AUTO_TITLE="true"
 
-plugins=(cp docker docker-compose gitfast z)
+plugins=(cp docker docker-compose gitfast symfony2 yarn z)
 
 # Load OH MY ZSH
 source $ZSH/oh-my-zsh.sh

@@ -1,7 +1,3 @@
-# Reapply POSTGRES_PATH to the front of the PATH
-PATH=${PATH//$POSTGRES_PATH:/}
-export PATH=$POSTGRES_PATH:$PATH:$HOME/bin
-
 # Don't paint user@hostname on prompt for user...
 DEFAULT_USER='srigi'
 

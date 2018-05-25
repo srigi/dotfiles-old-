@@ -4,7 +4,6 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export PATH=$PATH:$HOME/bin
-export HOMEBREW_GITHUB_API_TOKEN=c4e8d881f4d58d41a8d32bd95274892c28743db7
 export NODE_PATH=/usr/local/lib/node_modules
 export RBENV_ROOT=/usr/local/var/rbenv
 

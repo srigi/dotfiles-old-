@@ -1,5 +1,24 @@
 # shortcuts
 alias dc="docker-compose"
+alias dcb="docker-compose build"
+alias dcd="docker-compose down"
+alias dce="docker-compose exec"
+alias dcps="docker-compose ps"
+alias dcr="docker-compose run --rm"
+alias dcu="docker-compose up"
+alias dcub="docker-compose up --build"
+
+alias de="docker exec -ti"
+alias di="docker images"
+alias dps="docker ps -a"
+alias dr="docker run --rm -ti"
+alias drm="docker rm"
+alias drmi="docker rmi"
+alias ds="docker stop"
+alias dv="docker volume"
+alias dvls="docker volume ls"
+alias dvrm="docker volume rm"
+
 alias dl="cd ~/Downloads"
 alias s="subl ."
 

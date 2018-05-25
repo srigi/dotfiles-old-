@@ -13,9 +13,11 @@
 - .lesshst
 - .local
 - .localized
+- .m2
 - .nano
 - .node-gyp
 - .npm
+- .oracle_jre_usage
 - .putty
 - .rbenv
 - .rnd
@@ -26,6 +28,7 @@
 - .v8flags*.json
 - .wakatime
 - .zcompdump*
+- *.crdownload
 - Applications
 - Applications (Parallels)
 - Documents/.parallels-vm-directory
@@ -55,9 +58,13 @@
 - Library/Application Support/Flux
 - Library/Application Support/Google/Chrome/BrowserMetrics-spare.pma
 - Library/Application Support/Google/Chrome/CertificateTransparency
+- Library/Application Support/Google/Chrome/CertificateRevocation
 - Library/Application Support/Google/Chrome/Crashpad
 - Library/Application Support/Google/Chrome/Default/*.log
 - Library/Application Support/Google/Chrome/Default/Application Cache
+- Library/Application Support/Google/Chrome/Default/blob_storage
+- Library/Application Support/Google/Chrome/Default/data_reduction_proxy_leveldb
+- Library/Application Support/Google/Chrome/Default/DownloadMetadata
 - Library/Application Support/Google/Chrome/Default/Extensions
 - Library/Application Support/Google/Chrome/Default/Extension State
 - Library/Application Support/Google/Chrome/Default/GPUCache
@@ -78,6 +85,9 @@
 - Library/Application Support/Knowledge
 - Library/Application Support/Librarian
 - Library/Application Support/Logitech
+- Library/Application Support/Microsoft/Skype for Desktop/Cache
+- Library/Application Support/Microsoft/Skype for Desktop/media-stack/*.blog
+- Library/Application Support/Microsoft/Skype for Desktop/skylib/*.blog
 - Library/Application Support/MobileSync
 - Library/Application Support/Mozilla
 - Library/Application Support/NotificationCenter

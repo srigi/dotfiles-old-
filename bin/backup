@@ -21,7 +21,6 @@ if [ `whoami` != 'root' ]; then
 fi
 
 osascript -e 'if application "iTerm" is frontmost then tell application "System Events" to keystroke "k" using command down'
-echo -e "=== \033[0;33mbackuping \033[1;34m/Users/srigi\033[0m ==============================="
 
 # -a					archive mode, equals -rlptgoD (no -H, -A, -X)
 # -h					output numbers in a human-readable format
@@ -43,6 +42,7 @@ echo -e "=== \033[0;33mbackuping \033[1;34m/Users/srigi\033[0m =================
 # --bwlimit=KBPS		limit I/O bandwidth, KBytes per second
 # --filter "P <exp>"	don't delete <exp> on receiver
 
+echo -e "=== \033[0;33mbackuping \033[1;34m/Users/srigi\033[0m ==============================="
 rsync \
   -rlptDh \
   --progress \
@@ -55,7 +55,6 @@ rsync \
   $1/Users.srigi
 
 echo -e "\n=== \033[0;33mbackuping \033[1;34m/\033[0m =========================================="
-
 rsync \
   -rpthDL \
   --progress \

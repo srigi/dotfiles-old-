@@ -17,7 +17,7 @@ plugins=(cp docker docker-compose gitfast z)
 
 # Load OH MY ZSH
 source $ZSH/oh-my-zsh.sh
-export HISTSIZE=50000  # reapply my HISTSIZE
+export HISTSIZE=$HISTSIZE  # reapply my HISTSIZE
 
 # Load setopt definitions
 [[ -s "$HOME/.dotfiles/zsh/setopt" ]] && source "$HOME/.dotfiles/zsh/setopt"

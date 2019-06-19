@@ -1,14 +1,13 @@
 + Library/
 + Library/LaunchAgents/
 + Library/LaunchAgents/*
-+ Library/LaunchDaemons
 + Library/LaunchDaemons/
 + Library/LaunchDaemons/*
 + private/
 + private/etc/
 + private/etc/hosts
 + private/etc/paths
-+ private/etc/resolver
++ private/etc/resolver/
 + private/etc/resolver/*
 + usr/
 + usr/local/
@@ -23,11 +22,4 @@
 + usr/local/lib/
 + usr/local/lib/node_modules/
 + usr/local/lib/node_modules/*
-+ usr/local/var/
-+ usr/local/var/db/
-+ usr/local/var/db/**
-+ usr/local/var/lib/
-+ usr/local/var/lib/**
-+ usr/local/var/www/
-+ usr/local/var/www/*
 - *

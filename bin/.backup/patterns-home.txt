@@ -1,16 +1,21 @@
 - .adobe
+- .azure/logs
+- .azure/telemetry
 - .cache
 - .composer/cache
 - .config/browser-launcher2
 - .config/configstore
 - .cups
 - .distlib
+- .docker/registry2
 - .dropbox
 - .dropbox-master
 - .DS_Store
 - .fontconfig
 - .gem
 - .lesshst
+- .kube/cache
+- .kube/http-cache
 - .local
 - .localized
 - .m2
@@ -28,6 +33,7 @@
 - .v8flags*.json
 - .wakatime
 - .zcompdump*
+- .zoomus
 - *.crdownload
 - Applications
 - Applications (Parallels)
@@ -104,6 +110,7 @@
 - Library/Application Support/Spotify/Stay/Screenshots
 - Library/Application Support/Spotify/Users
 - Library/Application Support/Spotify/User Data
+- Library/Application Support/Steam
 - Library/Application Support/Sublime Text 3/Backup
 - Library/Application Support/Sublime Text 3/Cache
 - Library/Application Support/Sublime Text 3/Index
@@ -119,6 +126,7 @@
 - Library/Application Support/uTorrent/apps
 - Library/Application Support/uTorrent/*.log
 - Library/Application Support/uTorrent/*.old
+- Library/Application Support/videosubscriptionsd
 - Library/Application Support/voice-change-o-matic-*
 - Library/Assistant
 - Library/Assistants
@@ -142,7 +150,10 @@
 - Library/Favorites
 - Library/FileProvider
 - Library/FontCollections
+- Library/fontconfig
 - Library/Frameworks
+- Library/FrontBoard
+- Library/HomeKit
 - Library/GameKit
 - Library/Google
 - Library/Group Containers
@@ -165,10 +176,12 @@
 - Library/MobileSafari
 - Library/Mozilla
 - Library/Network
+- Library/News
 - Library/openvpn
 - Library/Parallels
 - Library/Passes
 - Library/Personas
+- Library/PersonalizationPortrait
 - Library/PhotoshopCrashes
 - Library/PreferencePanes
 - Library/Preferences/Adobe*
@@ -235,11 +248,14 @@
 - Library/Spelling/dynamic-counts.dat
 - Library/Spelling/dynamic-text.dat
 - Library/Spelling/LocalDictionary
+- Library/studentd
 - Library/Suggestions
 - Library/SyncedPreferences
 - Library/Synergy
 - Library/Thunderbird/Crash Reports
 - Library/VirtualBox
 - Library/Voices
+- Library/VoiceTrigger
 - Library/WebKit
 - Public
+- Sites/htdocs/geoip/temp/*

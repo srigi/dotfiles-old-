@@ -26,14 +26,14 @@ osascript -e 'if application "iTerm" is frontmost then tell application "System 
 # -h					output numbers in a human-readable format
 # -r					recurse into directories
 # -l					copy symlinks as symlinks
-# -L          transform symlink into referent file/dir
+# -L					transform symlink into referent file/dir
 # -p					preserve permissions
 # -t					preserve modification times
 # -g					preserve group
 # -o					preserve owner (super-user only)
 # -D					same as --devices --specials
-# --devices		preserve device files (super-user only)
-# --specials	preserve special files
+# --devices				preserve device files (super-user only)
+# --specials			preserve special files
 # -H					preserve hard links
 # -A					preserve ACLs (implies -p)
 # -X					preserve extended attributes

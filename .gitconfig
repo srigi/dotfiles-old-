@@ -3,10 +3,11 @@
 	email = srigi@srigi.sk
 
 [core]
-	whitespace = nowarn
-	editor = vim
-	pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 	autocrlf = input
+	editor = vim
+	ignorecase = false
+	pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
+	whitespace = nowarn
 
 [mergetool]
 	keepBackup = true

@@ -2,6 +2,15 @@ SEGMENT_SEPARATOR='⮀'
 CURRENT_BG='NONE'
 DISABLE_UNTRACKED_FILES_DIRTY=true
 
+KUBE_PS1_PREFIX="%F{238}"
+KUBE_PS1_SYMBOL_ENABLE=false
+KUBE_PS1_SYMBOL_USE_IMG=true
+KUBE_PS1_SEPERATOR=''
+KUBE_PS1_DIVIDER='%K{185}%F{238}⮀'
+KUBE_PS1_COLOR_CONTEXT="%K{238}%F{185}"
+KUBE_PS1_COLOR_NS="%F{235}"
+KUBE_PS1_SUFFIX='%K{NONE}%F{185}⮀ %F{white}'
+
 # Begin a segment
 # @argument background color
 # @argument foreground color
@@ -62,4 +71,4 @@ function build_prompt() {
 }
 
 
-PROMPT='$(build_prompt)'
+PROMPT='$(build_prompt)$(kube_ps1)'

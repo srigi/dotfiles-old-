@@ -1,0 +1,192 @@
+#!/bin/bash
+
+CONFIG_DIR=$HOME/.my-ca
+DHPARAM_LENGTH=2048
+OUTPUT_DIR=$CONFIG_DIR/certs
+OPENSSL_BIN=
+VALIDITY_PERIOD_CA=3650
+VALIDITY_PERIOD_SERVER=825
+
+function printHelp {
+	echo -e "\
+\033[33mmy-CA 1.1\033[0m, srigi.dev
+  This script will generate self-signed CA root certificate for company.
+  Then it will use this cert to sign required server certificates for your applications.
+  Don't use this server certificates for production! This is intended only for development & reviewapps!
+
+Usage:
+  my-ca [options]
+  my-ca <path_to_openssl>
+
+Options:
+  -h --help    show this help
+
+Please use only latest OpenSSL binary. Don't use LibreSSL!"
+
+	exit 0
+}
+
+function test_openssl {
+	OUTPUT=$($@ version 2>&1)
+
+	if ! [[ "$OUTPUT" =~ "OpenSSL 1.0" ]]; then
+		echo "You provided incorrect binary for OpenSSL"
+		exit 1
+	fi
+
+	OPENSSL_BIN=$1
+}
+
+function prompt {
+	echo -e "\033[33m$2 Generate $3\033[0m"
+
+	if [[ -r $4 ]]; then
+		echo -n "  $3 already exist, regenerate? [y/N] "
+		read INP
+		if [[ $INP == 'y' ]]; then
+			"$@"
+		fi
+	else
+		"$@";
+	fi
+}
+
+function generate_ca_key {
+	$OPENSSL_BIN genrsa \
+		-out $3 \
+		2048
+}
+
+function generate_ca_root_cert {
+	$OPENSSL_BIN req \
+		-x509 \
+		-new \
+		-days $VALIDITY_PERIOD_CA \
+		-nodes \
+		-sha256 \
+		-config $5 \
+		-key $4 \
+		-out $3
+
+	# convert a certificate to DER format
+	$OPENSSL_BIN x509 \
+		-outform DER \
+		-in $3 \
+		-out "${3%.*}".der
+}
+
+function generate_dhparam {
+	$OPENSSL_BIN dhparam \
+		-out "$OUTPUT_DIR/dhparam$DHPARAM_LENGTH.pem" \
+		$DHPARAM_LENGTH
+}
+
+function generate_server_key {
+	$OPENSSL_BIN genrsa \
+		-out $3 \
+		2048
+}
+
+function generate_server_csr {
+	$OPENSSL_BIN req \
+		-new \
+		-config $4 \
+		-key $5 \
+		-out $3
+}
+
+function generate_server_cert {
+	$OPENSSL_BIN x509 \
+		-req \
+		-days $VALIDITY_PERIOD_SERVER \
+		-sha256 \
+		-CA $4 \
+		-CAkey $5 \
+		-CAcreateserial \
+		-CAserial $OUTPUT_DIR/ca.seq \
+		-extfile $6 \
+		-in $7 \
+		-out $3
+}
+
+function generate_server_combined_cert {
+	cat $4 $5 > $3
+}
+
+function servers {
+	for domain in $1/* ; do
+		if [[ -d $domain ]]; then
+			SERVER="${domain##*/}"
+			mkdir -p $OUTPUT_DIR/servers/$SERVER
+
+			prompt generate_server_key "3.1" "server key ($SERVER)" \
+				$OUTPUT_DIR/servers/$SERVER/server.key
+
+			prompt generate_server_csr "3.2" "server CSR ($SERVER)" \
+				$OUTPUT_DIR/servers/$SERVER/server.csr \
+				$CONFIG_DIR/servers/$SERVER/csr.conf \
+				$OUTPUT_DIR/servers/$SERVER/server.key
+
+			prompt generate_server_cert "3.4" "server cert ($SERVER)" \
+				$OUTPUT_DIR/servers/$SERVER/server.crt \
+				$OUTPUT_DIR/ca.crt \
+				$OUTPUT_DIR/ca.key \
+				$CONFIG_DIR/servers/$SERVER/crt.conf \
+				$OUTPUT_DIR/servers/$SERVER/server.csr
+
+			prompt generate_server_combined_cert "4.1" "server übercert file ($SERVER)" \
+				$OUTPUT_DIR/servers/$SERVER/server.crt+ca \
+				$OUTPUT_DIR/servers/$SERVER/server.crt \
+				$OUTPUT_DIR/ca.crt
+		fi
+	done
+}
+
+function run {
+	test_openssl $1
+
+	mkdir -p $OUTPUT_DIR/servers
+
+	prompt generate_ca_key "1.1" "CA private key" \
+		"$OUTPUT_DIR/ca.key"
+
+	prompt generate_ca_root_cert "1.2" "CA root certificate" \
+		"$OUTPUT_DIR/ca.crt"\
+		"$OUTPUT_DIR/ca.key"\
+		"$CONFIG_DIR/ca.conf"
+
+	echo -en "\033[33mDo you want to generate dhparam? This action may take long time!\033[0m [y/N]"
+	read INP
+	if [[ $INP == 'y' ]]; then
+		prompt generate_dhparam "2.1" "dhparam" \
+			"$OUTPUT_DIR/dhparam$DHPARAM_LENGTH.pem"
+
+		# concat dhparam with CA cert
+		cat \
+			"$OUTPUT_DIR/dhparam$DHPARAM_LENGTH.pem" \
+			"$OUTPUT_DIR/ca.crt" \
+			> "$OUTPUT_DIR/ca.pem"
+	fi
+
+	servers \
+		$CONFIG_DIR/servers
+}
+
+
+case $1 in
+	*openssl)
+		run $1
+		;;
+
+	'-h')
+		printHelp
+		;;
+
+	'--help')
+		printHelp
+		;;
+
+	*)
+		printHelp
+		;;
+esac

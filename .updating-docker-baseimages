@@ -1,0 +1,7 @@
+adminer:latest
+google/cadvisor:latest
+nginx:1.17-alpine
+node:12-alpine
+php:7.4-fpm
+postgres:11-alpine
+rabbitmq:3.8-management-alpine

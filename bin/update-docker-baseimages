@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+LIST="$HOME/.updating-docker-baseimages"
+
+
+while read line; do
+  docker pull $line
+done <$LIST

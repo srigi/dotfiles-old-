@@ -1,6 +1,6 @@
 # shortcuts docker
 alias de="docker exec -ti"
-alias di="docker images"
+alias di="docker images | sort"
 alias dps="docker ps -a"
 alias dr="docker run --rm -ti"
 alias drm="docker rm"
@@ -68,11 +68,12 @@ alias kgsw="kg svc -o wide --watch"
 alias dl="cd ~/Downloads"
 alias s="subl ."
 alias cleanup="find $HOME -type f -name '*.DS_Store' -ls -delete"  	# recursively delete `.DS_Store` files from $HOME
-alias composer="php -n -c ~/.dotfiles/composer.ini ~/bin/composer.phar"
+alias composer="php -n -dmemory_limit=2560M ~/bin/composer.phar"
 alias ls='gls -lAFh --color --group-directories-first'
 alias npmls="npm list --depth=0 2>/dev/null"
 alias npmo="npm outdated --depth 0"
 alias sudo='sudo '													# enable aliases to be sudo’ed
+alias tf=terraform
 #alias sudo='A=`alias` sudo env '									# save current ENV when sudo
 alias watch='watch '
 

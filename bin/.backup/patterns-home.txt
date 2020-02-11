@@ -257,5 +257,6 @@
 - Library/Voices
 - Library/VoiceTrigger
 - Library/WebKit
+- Parallels
 - Public
 - Sites/htdocs/geoip/temp/*

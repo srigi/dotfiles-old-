@@ -34,6 +34,7 @@ osascript -e 'if application "iTerm" is frontmost then tell application "System 
 # -D					same as --devices --specials
 # --devices				preserve device files (super-user only)
 # --specials			preserve special files
+# --modify-window		compare mod-times with reduced accuracy
 # -H					preserve hard links
 # -A					preserve ACLs (implies -p)
 # -X					preserve extended attributes
@@ -51,6 +52,7 @@ rsync \
   --delete-excluded \
   --delete-after \
   --exclude-from="$HOME/bin/.backup/patterns-home.txt" \
+  --modify-window=1 \
   /Users/srigi/ \
   $1/Users.srigi
 

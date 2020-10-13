@@ -29,7 +29,7 @@ Please use only latest OpenSSL binary. Don't use LibreSSL!"
 function test_openssl {
 	OUTPUT=$($@ version 2>&1)
 
-	if ! [[ "$OUTPUT" =~ "OpenSSL 1.0" ]]; then
+	if ! [[ "$OUTPUT" =~ "OpenSSL 1" ]]; then
 		echo "You provided incorrect binary for OpenSSL"
 		exit 1
 	fi

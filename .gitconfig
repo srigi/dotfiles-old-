@@ -9,6 +9,9 @@
 	pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 	whitespace = nowarn
 
+[http]
+	cookiefile = /Users/srigi/.gitcookies
+
 [mergetool]
 	keepBackup = true
 

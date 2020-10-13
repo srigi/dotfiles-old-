@@ -12,6 +12,7 @@
 *history
 *hst
 .DS_Store
+.gitcookies
 .netrc
 .rnd
 .viminfo

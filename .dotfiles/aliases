@@ -98,6 +98,16 @@ function cdf() {
 	fi
 }
 
+function imv() {
+  if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
+    command mv "$@"
+    return
+  fi
+
+  read -ei "$1" newfilename
+  command mv -v -- "$1" "$newfilename"
+}
+
 function randstr() {
 	cat /dev/urandom | gtr -dc 'a-zA-Z0-9!@#$%^&*()-_=+[{}];:\|`~,<>./?' | fold -w ${1:-16} | head -n 1
 }

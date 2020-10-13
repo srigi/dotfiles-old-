@@ -1,6 +1,7 @@
 # shortcuts docker
 alias de="docker exec -ti"
 alias di="docker images | sort"
+alias dlogs="docker logs -f"
 alias dps="docker ps -a"
 alias dr="docker run --rm -ti"
 alias drm="docker rm"
@@ -20,34 +21,24 @@ alias dcr="docker-compose run --rm"
 alias dcu="docker-compose up"
 alias dcub="docker-compose up --build"
 
-# shortcuts kubectl
+# kubectl
 alias k=kubectl
 alias ka="k apply -f"
 alias kak="k apply -k"
-alias kc="k create -f"
 alias kdesc="k describe"
 alias ke="k exec -ti"
-alias kgg="k get --all-namespaces"
 alias kl="k logs -f"
 alias kpd='k patch deployment -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\"}}}}}"'
-# kubectl delete ...
-alias kd="k delete"
-alias kdd="k delete deploy"
-alias kdi="k delete ingress"
-alias kdj="k delete job"
-alias kdns="k delete ns"
-alias kdpv="k delete persistentvolume"
-alias kdpvc="k delete persistentvolumeclaim"
-alias kds="k delete svc"
-#alias kdja="for j in $(k get jobs -o custom-columns=:.metadata.name -n hace); do k delete job -n hace $j; done"
-# kubectl get ...
-alias kg="k get --show-labels"
+# kubectl get...
+alias kg="k get"
+alias kg-a="kg --all-namespaces"
+alias kg-aw="kg --all-namespaces -o wide --show-labels"
 alias kga="kg all"
-alias kgaw="watch -n1 -t kubectl get all --show-labels"
-alias kgaa="k get all -o wide --show-labels"
-alias kgaaw="watch -n1 -t kubectl get all -o wide --show-labels"
-alias kgd="kg deploy -o wide"
-alias kgdw="kg deploy -o wide --watch"
+alias kga-w="kg all -o wide --show-labels"
+alias kga-a="kg all --all-namespaces"
+alias kga-aw="kg all --all-namespaces -o wide --show-labels"
+alias kgaw="watch -n1 -t kubectl get all"
+alias kgaw-w="watch -n1 -t kubectl get all -o wide --show-labels"
 alias kgi="kg ingresses --all-namespaces -o wide"
 alias kgiw="kg ingresses --all-namespaces -o wide --watch"
 alias kgj="kg jobs --all-namespaces -o wide"
@@ -63,6 +54,15 @@ alias kgpvc="kg persistentvolumeclaims --all-namespaces"
 alias kgpvcw="kg persistentvolumeclaims --all-namespaces --watch"
 alias kgs="kg svc -o wide"
 alias kgsw="kg svc -o wide --watch"
+# kubectl delete...
+alias kd="k delete"
+alias kdd="kd deploy"
+alias kdi="kd ingress"
+alias kdj="kd job"
+alias kdns="kd namespace"
+alias kdpv="kd persistentvolume"
+alias kdpvc="kd persistentvolumeclaim"
+alias kds="kd service"
 
 # utility aliases
 alias dl="cd ~/Downloads"

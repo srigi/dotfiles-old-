@@ -12,6 +12,7 @@
 *history
 *hst
 .DS_Store
+.geoip
 .gitcookies
 .netrc
 .rnd

@@ -1,21 +1,15 @@
-- .adobe
 - .azure/logs
 - .azure/telemetry
 - .cache
 - .composer/cache
-- .config/browser-launcher2
 - .config/configstore
-- .cups
-- .distlib
 - .docker/registry2
 - .dropbox
-- .dropbox-master
 - .DS_Store
-- .fontconfig
 - .gem
-- .lesshst
 - .kube/cache
 - .kube/http-cache
+- .lesshst
 - .local
 - .localized
 - .m2
@@ -30,7 +24,6 @@
 - .subversion
 - .tdb
 - .Trash
-- .v8flags*.json
 - .wakatime
 - .zcompdump*
 - .zoomus
@@ -46,8 +39,8 @@
 - Library/Application Support/accountsd
 - Library/Application Support/AddressBook
 - Library/Application Support/Adobe
-- Library/Application Support/Apple
 - Library/Application Support/App Store
+- Library/Application Support/Apple
 - Library/Application Support/CallHistoryDB
 - Library/Application Support/CallHistoryTransactions
 - Library/Application Support/CCleaner
@@ -63,16 +56,16 @@
 - Library/Application Support/Firefox
 - Library/Application Support/Flux
 - Library/Application Support/Google/Chrome/BrowserMetrics-spare.pma
-- Library/Application Support/Google/Chrome/CertificateTransparency
 - Library/Application Support/Google/Chrome/CertificateRevocation
+- Library/Application Support/Google/Chrome/CertificateTransparency
 - Library/Application Support/Google/Chrome/Crashpad
 - Library/Application Support/Google/Chrome/Default/*.log
 - Library/Application Support/Google/Chrome/Default/Application Cache
 - Library/Application Support/Google/Chrome/Default/blob_storage
 - Library/Application Support/Google/Chrome/Default/data_reduction_proxy_leveldb
 - Library/Application Support/Google/Chrome/Default/DownloadMetadata
-- Library/Application Support/Google/Chrome/Default/Extensions
 - Library/Application Support/Google/Chrome/Default/Extension State
+- Library/Application Support/Google/Chrome/Default/Extensions
 - Library/Application Support/Google/Chrome/Default/GPUCache
 - Library/Application Support/Google/Chrome/Default/IndexedDB
 - Library/Application Support/Google/Chrome/Default/Local Extension Settings
@@ -84,7 +77,6 @@
 - Library/Application Support/Google/Chrome/ShaderCache
 - Library/Application Support/Google/Chrome/WidevineCdm
 - Library/Application Support/Google/RLZ
-- Library/Application Support/Google Earth
 - Library/Application Support/icdd
 - Library/Application Support/iCloud
 - Library/Application Support/JetBrains
@@ -108,24 +100,21 @@
 - Library/Application Support/Spotify/SpotifyWebHelper
 - Library/Application Support/Spotify/Stay/Backups
 - Library/Application Support/Spotify/Stay/Screenshots
-- Library/Application Support/Spotify/Users
 - Library/Application Support/Spotify/User Data
+- Library/Application Support/Spotify/Users
 - Library/Application Support/Steam
 - Library/Application Support/Sublime Text 3/Backup
 - Library/Application Support/Sublime Text 3/Cache
 - Library/Application Support/Sublime Text 3/Index
-- Library/Application Support/SyncServices
 - Library/Application Support/sushiBrowser/Cache
 - Library/Application Support/sushiBrowser/GPUCache
 - Library/Application Support/sushiBrowser/IndexedDb
 - Library/Application Support/sushiBrowser/Local Storage
 - Library/Application Support/sushiBrowser/Session Storage
 - Library/Application Support/sushiBrowser/ShaderCache
+- Library/Application Support/SyncServices
 - Library/Application Support/Telestream
 - Library/Application Support/Ubiquity
-- Library/Application Support/uTorrent/apps
-- Library/Application Support/uTorrent/*.log
-- Library/Application Support/uTorrent/*.old
 - Library/Application Support/videosubscriptionsd
 - Library/Application Support/voice-change-o-matic-*
 - Library/Assistant
@@ -153,10 +142,10 @@
 - Library/fontconfig
 - Library/Frameworks
 - Library/FrontBoard
-- Library/HomeKit
 - Library/GameKit
 - Library/Google
 - Library/Group Containers
+- Library/HomeKit
 - Library/Icons
 - Library/IdentityServices
 - Library/iMovie
@@ -164,8 +153,8 @@
 - Library/Internet Plug-Ins
 - Library/Internet Plug-ins Disabled
 - Library/iTunes
-- Library/KeyboardServices
 - Library/Keyboard Layouts
+- Library/KeyboardServices
 - Library/LanguageModeling
 - Library/Logs
 - Library/Mail
@@ -180,21 +169,18 @@
 - Library/openvpn
 - Library/Parallels
 - Library/Passes
-- Library/Personas
 - Library/PersonalizationPortrait
+- Library/Personas
 - Library/PhotoshopCrashes
 - Library/PreferencePanes
-- Library/Preferences/Adobe*
-- Library/Preferences/ByHost/com.adobe*
-- Library/Preferences/ByHost/com.apple*
-- Library/Preferences/ByHost/.GlobalPreferences*.plist
-- Library/Preferences/ExtendScript Toolkit
-- Library/Preferences/Macromedia
-- Library/Preferences/Parallels
-- Library/Preferences/.GlobalPreferences.plist
-- Library/Preferences/*crash*
 - Library/Preferences/*.mplayer*
 - Library/Preferences/*.screenflow*
+- Library/Preferences/*crash*
+- Library/Preferences/.GlobalPreferences.plist
+- Library/Preferences/Adobe*
+- Library/Preferences/ByHost/.GlobalPreferences*.plist
+- Library/Preferences/ByHost/com.adobe*
+- Library/Preferences/ByHost/com.apple*
 - Library/Preferences/callservicesd.plist
 - Library/Preferences/com.adobe*
 - Library/Preferences/com.apple*
@@ -216,24 +202,29 @@
 - Library/Preferences/com.rouge41.middleClick.plist
 - Library/Preferences/com.solidstatenetworks*
 - Library/Preferences/com.unity3d*
+- Library/Preferences/ExtendScript Toolkit
+- Library/Preferences/ExtendScript Toolkit
 - Library/Preferences/info.marcel-dierkes.KeepingYouAwake.plist
 - Library/Preferences/jetbrains.communicator*
 - Library/Preferences/knowledge-agent.plist
 - Library/Preferences/loginwindow.plist
+- Library/Preferences/Macromedia
+- Library/Preferences/Macromedia
 - Library/Preferences/mbicloudsetup.plist
 - Library/Preferences/MobileMeAccounts.plist
 - Library/Preferences/net.nightproductions.prefSetter*
 - Library/Preferences/net.pornel.ImageOptim*
 - Library/Preferences/org.cups*
 - Library/Preferences/org.mozilla.firefox.plist
-- Library/Preferences/pbs.plist
-- Library/Preferences/rtcpal_registry.reg
-- Library/Preferences/xcode*
 - Library/Preferences/org.virtualbox*
+- Library/Preferences/Parallels
+- Library/Preferences/pbs.plist
 - Library/Preferences/QuickTime*
+- Library/Preferences/rtcpal_registry.reg
 - Library/Preferences/UserEventAgent.plist
 - Library/Preferences/voice-change-o-matic-*
 - Library/Preferences/widget-com.apple*
+- Library/Preferences/xcode*
 - Library/Printers
 - Library/PubSub
 - Library/RescueTime.com
@@ -242,8 +233,8 @@
 - Library/Saved Application State
 - Library/Saved Searches
 - Library/Screen Savers
-- Library/Sharing
 - Library/Services
+- Library/Sharing
 - Library/Sounds
 - Library/Spelling/dynamic-counts.dat
 - Library/Spelling/dynamic-text.dat
@@ -260,3 +251,4 @@
 - Parallels
 - Public
 - Sites/htdocs/geoip/temp/*
+- VirtualBox

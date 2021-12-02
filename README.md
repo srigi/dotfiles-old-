@@ -1,5 +1,12 @@
 # srigi's dotfiles
 
+---
+**Deprecated!**
+
+This repository is read-only now. I ditched the idea of both BASH & ZSH configured together with classic git repo. Also I'm ditching Oh-my-zsh.
+
+---
+
 is a collection of configuration files & command-line tools to setup *NIX system the way I like it. Example my ZSH prompt:
 
 ![a](http://img.srigi.sk/prompt.new.png)
